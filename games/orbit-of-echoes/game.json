@@ -1,0 +1,59 @@
+{
+  "id": "orbit-of-echoes",
+  "title": "ORBIT OF ECHOES",
+  "heroTitle": "ORBIT\nOF ECHOES",
+  "tagline": "잊힌 별의 끝에서, 당신의 이야기가 시작됩니다.",
+  "description": "미지의 행성에 남겨진 신호를 따라, 잊힌 문명의 비밀을 찾아가는 우주 탐험 어드벤처.",
+  "genre": "EXPLORATION · ADVENTURE",
+  "status": "coming-soon",
+  "featured": true,
+  "demo": true,
+  "banner": "games/orbit-of-echoes/art.webp",
+  "bannerAlt": "거대한 고리 유적과 푸른 위성 아래 외계 행성을 탐험하는 우주비행사 콘셉트 아트",
+  "platforms": [
+    {
+      "type": "steam",
+      "url": ""
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "games/orbit-of-echoes/art.webp",
+      "alt": "산맥 위에 떠 있는 고리 유적을 바라보는 우주비행사",
+      "caption": "고리 유적이 잠든 행성 · 예시 콘셉트 아트"
+    },
+    {
+      "src": "games/orbit-of-echoes/ruins.webp",
+      "alt": "별자리 문양으로 빛나는 고대 관측소 내부를 탐험하는 우주비행사",
+      "caption": "별의 기록을 간직한 관측소 · 예시 콘셉트 아트"
+    },
+    {
+      "src": "games/orbit-of-echoes/valley.webp",
+      "alt": "빛나는 식물과 떠 있는 바위가 있는 협곡의 돌다리를 건너는 우주비행사",
+      "caption": "푸른 빛이 이끄는 협곡 · 예시 콘셉트 아트"
+    }
+  ],
+  "about": [
+    "수신된 것은 이름 없는 별에서 온 짧은 신호 하나. 당신은 홀로 탐사선을 타고, 오랫동안 누구도 닿지 않았던 행성에 발을 내딛습니다.",
+    "거대한 고리 유적, 빛으로 기록된 별자리, 안개 너머로 이어지는 협곡. 흩어진 문명의 흔적을 하나씩 이어 가며 이곳에 남겨진 이야기를 발견하세요. 서두르지 않아도 좋습니다. 다음 풍경이 당신을 기다리고 있으니까요."
+  ],
+  "features": [
+    "발길이 닿는 곳마다 새로운 풍경을 만나는 행성 탐험",
+    "고대 유적의 신호를 해석하며 풀어 가는 환경 퍼즐",
+    "대사보다 풍경과 소리로 전해지는 조용한 이야기"
+  ],
+  "tags": [
+    "우주 탐험",
+    "어드벤처",
+    "환경 퍼즐",
+    "싱글 플레이"
+  ],
+  "developer": "NAHON Studio",
+  "releaseDate": "추후 공개",
+  "players": "싱글 플레이",
+  "languages": [
+    "한국어",
+    "English"
+  ],
+  "videos": []
+}

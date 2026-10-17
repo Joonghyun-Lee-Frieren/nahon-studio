@@ -1,0 +1,7 @@
+{
+  "games": [
+    "games/orbit-of-echoes/game.json",
+    "games/moss-and-moon/game.json",
+    "games/neon-drift/game.json"
+  ]
+}

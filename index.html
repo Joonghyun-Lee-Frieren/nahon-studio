@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="작은 상상에서 시작되는 새로운 즐거움. NAHON Studio의 Steam과 모바일 게임을 만나보세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NAHON Studio — 작은 상상, 새로운 세계">
+  <meta property="og:description" content="NAHON Studio의 Steam·모바일 게임과 새로운 이야기를 만나보세요.">
+  <title>NAHON Studio — 작은 상상, 새로운 세계</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./shared.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#games">게임 목록으로 건너뛰기</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="NAHON Studio 홈">
+      <svg class="brand-symbol" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="7" fill="currentColor"/><path d="M9 26V10h5l8 10V10h5v16h-5l-8-10v10z" fill="#fff"/></svg>
+      <span>NAHON<span class="brand-studio">STUDIO</span></span>
+    </a>
+    <nav aria-label="메인 메뉴">
+      <a class="nav-link" href="#games">Games</a>
+      <a class="nav-link" href="#studio">Studio</a>
+      <a class="nav-explore" href="#games">새로운 세계 만나기 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro wrap" aria-labelledby="intro-title">
+      <div class="eyebrow"><span class="orange-dot"></span> INDEPENDENT GAME STUDIO</div>
+      <div class="intro-row">
+        <h1 id="intro-title">작은 상상, <span>새로운 세계.</span></h1>
+        <p>당신의 일상에 작은 모험을 더합니다.<br>NAHON Studio가 만드는 플레이의 즐거움.</p>
+      </div>
+    </section>
+
+    <section class="showcase wrap" aria-label="추천 게임" aria-roledescription="캐러셀" tabindex="0">
+      <div id="slides" class="slides"><div class="loading-state">새로운 세계를 불러오는 중입니다.</div></div>
+      <div class="hero-controls" id="hero-controls" hidden>
+        <div class="slide-tabs" id="slide-tabs" role="group" aria-label="배너 선택"></div>
+        <div class="slide-actions">
+          <button id="autoplay" class="round-button pause-button" type="button" aria-label="배너 자동 재생 일시정지"><span aria-hidden="true">Ⅱ</span></button>
+          <span class="slide-count"><span id="slide-current">01</span><span class="count-divider">/</span><span id="slide-total">03</span></span>
+          <button id="slide-prev" class="round-button" type="button" aria-label="이전 게임 배너">←</button>
+          <button id="slide-next" class="round-button" type="button" aria-label="다음 게임 배너">→</button>
+        </div>
+      </div>
+      <span id="slide-announcement" class="sr-only" role="status" aria-live="polite"></span>
+    </section>
+
+    <div class="platform-strip wrap" aria-label="지원 플랫폼">
+      <span>BIG ADVENTURES. ANY SCREEN.</span>
+      <div><span data-platform-icon="steam"></span><span class="strip-divider"></span><span data-platform-icon="app-store"></span><span data-platform-icon="google-play"></span></div>
+    </div>
+
+    <section id="games" class="games-section wrap" aria-labelledby="games-title">
+      <div class="section-heading">
+        <div><div class="eyebrow section-label">OUR GAMES <span class="label-line"></span></div><h2 id="games-title">어떤 세계로 떠나볼까요<span class="orange-text">?</span></h2></div>
+        <div class="filters" role="group" aria-label="게임 플랫폼 필터">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">전체 <span id="game-count">0</span></button>
+          <button class="filter" type="button" data-filter="pc" aria-pressed="false">PC</button>
+          <button class="filter" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+        </div>
+      </div>
+      <p id="demo-note" class="demo-note" hidden>아래 게임명과 콘셉트 이미지는 페이지 구성을 보여주는 예시입니다.</p>
+      <div id="game-grid" class="game-grid" aria-live="polite" aria-busy="true"></div>
+      <div id="content-error" class="content-error" role="alert" hidden>게임 정보를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요. <button type="button" id="retry">다시 불러오기 ↻</button></div>
+      <noscript><p class="content-error">게임 소개를 보려면 브라우저의 JavaScript를 활성화해 주세요.</p></noscript>
+    </section>
+
+    <section id="studio" class="studio-section" aria-labelledby="studio-title">
+      <div class="studio-inner wrap">
+        <div class="studio-title-block"><div class="eyebrow section-label">HELLO, WE ARE NAHON <span class="orange-dot"></span></div><h2 id="studio-title">작은 아이디어가,<br>오래 남는 경험이 되도록<span class="orange-text">.</span></h2></div>
+        <div class="studio-copy"><p>낯선 세계를 발견하는 설렘,<br>한 번 더 도전하게 되는 즐거움.</p><p>NAHON Studio는 우리만의 상상을 게임에 담습니다.<br>큰 화면에서도, 손안의 작은 화면에서도.<br>당신이 다시 찾고 싶은 순간을 만들어 갑니다.</p><a href="#games" class="text-link">우리의 게임 둘러보기 <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="studio-wordmark wrap" aria-hidden="true">LET’S PLAY<span>↗</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a class="footer-brand" href="#">NAHON <span>STUDIO</span></a>
+    <p>© <span id="year">2026</span> NAHON Studio. All rights reserved.</p>
+    <a class="back-top" href="#">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+
+</body>
+</html>

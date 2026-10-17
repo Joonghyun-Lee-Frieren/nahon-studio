@@ -1,2 +1,82 @@
-# nahon-studio
-NAHON Studio — Steam &amp; mobile game showcase, powered by GitHub Pages.
+# NAHON Studio
+
+Steam·모바일 게임을 소개하는 GitHub Pages용 정적 사이트입니다. 빌드 도구나 패키지 설치가 필요하지 않습니다.
+
+- 사이트: [NAHON Studio](https://joonghyun-lee-frieren.github.io/nahon-studio/)
+- 저장소: [Joonghyun-Lee-Frieren/nahon-studio](https://github.com/Joonghyun-Lee-Frieren/nahon-studio)
+- 다른 게임 프로젝트에 전달: [짧은 업로드 지침](docs/UPLOAD_GAME_SHORT.md)
+
+- 큰 추천 게임 슬라이더: 6.5초 자동 전환, 직접 선택, 이전/다음, 일시정지, 터치 스와이프
+- 게임 목록: 전체 / PC / Mobile 필터, 플랫폼 아이콘과 스토어 링크
+- 게임별 상세 페이지: 큰 미디어 뷰어, 스크린샷 썸네일, YouTube 영상, 게임 정보·긴 소개·스토어 버튼
+- 이미지 갤러리: 이전/다음, 썸네일 선택, 확대 보기, 방향키·터치 스와이프, Esc 닫기
+- 데스크톱·태블릿·모바일 반응형 레이아웃, 키보드 탐색, 모션 줄이기 설정 지원
+- 프로젝트별 JSON과 이미지 폴더로 콘텐츠 관리
+
+현재 게임명, 설명, 생성 이미지는 **레이아웃 확인을 위한 가상의 예시**입니다. 실제 출시작 정보로 교체하세요. 스토어 URL이 비어 있으면 링크 대신 `준비 중`을 표시합니다.
+
+## 로컬 미리보기
+
+저장소 폴더에서 다음을 실행하고 [로컬 미리보기](http://localhost:8000)를 엽니다.
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Windows에서는 `py -m http.server 8000 --bind 127.0.0.1`을 사용할 수 있습니다. 종료는 `Ctrl+C`입니다. JSON을 불러오기 때문에 `index.html`을 더블클릭하는 `file://` 방식 대신 HTTP 서버를 이용하세요.
+
+## 게임 자료 추가
+
+[게임 추가 가이드](docs/ADDING_GAMES.md)를 각 게임 프로젝트에 전달하세요. [자료 템플릿](games/_template/game.json)을 복사하면 됩니다.
+
+```text
+index.html                 홈과 스튜디오 소개 문구
+game.html                  게임 상세 페이지 (예: game.html?id=orbit-of-echoes)
+styles.css                 색상·레이아웃·반응형 스타일
+game.css                   상세 페이지 스타일
+shared.js                  공용 콘텐츠 검증·플랫폼·URL 처리
+app.js                     홈 슬라이더·필터
+game.js                    상세 소개·영상·스크린샷 뷰어
+assets/                    사이트 로고 및 이미지 대체 화면
+content/games.json         게임 파일 목록과 표시 순서
+games/
+  _template/game.json      복사용 게임 데이터 템플릿
+  <game-id>/
+    game.json              게임 이름·소개·플랫폼 링크
+    banner.webp            상단 배너
+    cover.webp             선택: 목록용 표지
+    screenshot-01.webp     게임 스크린샷
+docs/ADDING_GAMES.md        프로젝트 담당자용 등록 가이드
+docs/IMAGE_CREDITS.md       예시 이미지 생성 기록
+scripts/validate_content.py 콘텐츠 오류 검사
+```
+
+홈의 배너 버튼·게임 이미지·게임 제목을 누르면 상세 페이지로 이동합니다. 상세 주소는 `game.html?id=<게임ID>`이며 새로고침·직접 링크·GitHub Pages 하위 경로를 지원합니다. `videos`에 실제 YouTube URL을 넣으면 영상 썸네일과 재생 버튼이 나타납니다. 현재 예시 게임에는 실제 트레일러가 없어 `준비 중`으로 표시하며, 첫 번째 예시 게임에는 3장의 콘셉트 이미지가 포함되어 있습니다.
+
+변경 후 콘텐츠 검사를 실행할 수 있습니다. Python 표준 라이브러리만 사용합니다.
+
+```sh
+python3 scripts/validate_content.py
+```
+
+## GitHub Pages 게시
+
+1. 이 폴더의 파일 전체를 사용할 GitHub 저장소에 업로드합니다. `index.html`이 저장소 최상위에 있어야 합니다. `.nojekyll`도 포함합니다.
+2. 저장소의 **Settings → Pages → Build and deployment → Source**에서 **Deploy from a branch**를 선택합니다.
+3. 파일을 업로드한 브랜치(예: `main`)와 **/(root)**를 선택하고 저장합니다.
+4. 배포가 끝나면 Pages 설정 화면의 **Visit site**로 확인합니다.
+
+일반 프로젝트 저장소의 주소는 `https://<계정>.github.io/<저장소>/`입니다. `<계정>.github.io`라는 저장소를 사용하면 계정 기본 주소에 게시됩니다. 이미지·스크립트·JSON 경로는 모두 상대경로라 프로젝트 하위 경로에서도 동작합니다.
+
+공식 안내: [GitHub Pages 사이트 만들기](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), [게시 소스 설정](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+이 사이트는 위 저장소의 `main` 브랜치 최상위(`/`)를 GitHub Pages 게시 소스로 사용합니다. `main`에 게임 자료를 반영하면 사이트가 자동 갱신됩니다. 상세 페이지 주소는 `https://joonghyun-lee-frieren.github.io/nahon-studio/game.html?id=<게임ID>`입니다.
+
+## 스튜디오 정보 수정
+
+- `index.html`: 브랜드·상단 소개·Studio 영역·검색 결과 제목 및 설명
+- `styles.css` 상단 `:root`: 포인트 컬러와 배경색
+- `assets/favicon.svg`: 브라우저 탭 아이콘
+- 사이트에 연락처가 필요하면 실제 이메일이나 공식 링크를 확인한 뒤 추가합니다.
+
+별도의 서버·데이터베이스·관리자 업로드 화면은 없습니다. 자료 변경은 GitHub의 파일 업로드 또는 Git 커밋으로 반영됩니다.
