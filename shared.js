@@ -2,6 +2,7 @@
 
 // Shared content, platform and URL helpers for home and game detail pages.
 const PLATFORM = {
+  roblox: { name: "Roblox", category: "pc", categories: ["pc", "mobile"], path: '<path fill="currentColor" fill-rule="evenodd" d="M5.6 0 24 5.6 18.4 24 0 18.4 5.6 0Zm3.9 7.7-1.8 5.8 5.8 1.8 1.8-5.8-5.8-1.8Z"/>' },
   steam: { name: "Steam", category: "pc", path: '<circle cx="16.5" cy="7.5" r="4.7" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="7.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m12.4 7.7-4.5 6.5 3.5 2.2 6-4.4" fill="currentColor"/><circle cx="8.5" cy="17.2" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m1 12 8.7 3.4a1.9 1.9 0 0 1-1.5 3.5L1 16" fill="currentColor"/>' },
   "app-store": { name: "App Store", category: "mobile", path: '<path d="m10 3 10 17M14 3 4 20M3 15h13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path d="M19.5 15H22" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>' },
   "google-play": { name: "Google Play", category: "mobile", path: '<path d="M4 2.8v18.4L15 12z" fill="currentColor"/><path d="m5.4 2.1 12.5 7.2-2.1 2.1zM5.4 21.9l12.5-7.2-2.1-2.1zM18.8 9.8l2.2 1.3c.8.4.8 1.4 0 1.8l-2.2 1.3-2.2-2.2z" fill="currentColor"/>' }
