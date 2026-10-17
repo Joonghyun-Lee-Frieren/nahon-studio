@@ -1,0 +1,82 @@
+{
+  "id": "raccooligans",
+  "title": "너굴리건즈",
+  "heroTitle": "너굴리건즈",
+  "tagline": "너구리 크루와 함께, 도시의 불빛을 되찾는 방치 RPG.",
+  "description": "너구리 크루와 도시의 불빛을 되찾는 가로형 방치 RPG. 자동 전투와 수동 스킬, 장비 성장과 동료 편성으로 전술을 조합하고 지역의 이야기와 기억을 모으세요.",
+  "genre": "IDLE · RPG",
+  "status": "in-development",
+  "featured": true,
+  "demo": false,
+  "banner": "games/raccooligans/banner.webp",
+  "bannerAlt": "푸른 하늘 아래 고층 건물과 철교, 컨테이너 부두가 펼쳐진 너굴리건즈의 항만 도시",
+  "cover": "games/raccooligans/cover.webp",
+  "platforms": [
+    {
+      "type": "google-play",
+      "url": ""
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "games/raccooligans/screenshot-01-combat.png",
+      "alt": "항만 전장에서 너구리 대장과 편성한 동료들이 철물단 적과 싸우는 자동 전투 화면",
+      "caption": "개발 중 실제 게임 화면 · 자동 전투와 스킬"
+    },
+    {
+      "src": "games/raccooligans/screenshot-02-crew.png",
+      "alt": "크루 메뉴에서 정비사 토비와 방패수 모카의 출전 상태와 편성 인원을 확인하는 화면",
+      "caption": "개발 중 실제 게임 화면 · 역할에 맞춘 동료 편성"
+    },
+    {
+      "src": "games/raccooligans/screenshot-03-restoration.png",
+      "alt": "남문 항만의 발전기와 장터, 쉼터 복구 완료 및 보상 내역을 보여 주는 화면",
+      "caption": "개발 중 실제 게임 화면 · 전장 풍경으로 이어지는 도시 복구"
+    },
+    {
+      "src": "games/raccooligans/screenshot-04-memories.png",
+      "alt": "남문 항만의 기억 네 개를 모두 읽고 획득한 지역 인장을 장착한 기억첩 화면",
+      "caption": "개발 중 실제 게임 화면 · 지역의 기억과 인장 수집"
+    },
+    {
+      "src": "games/raccooligans/screenshot-05-first-boss.png",
+      "alt": "첫 보스 격파 명장면과 지급된 보상, 새 기억 및 획득 장비를 보여 주는 작전 성공 화면",
+      "caption": "개발 중 실제 게임 화면 · 보스 격파와 작전 기록"
+    }
+  ],
+  "about": [
+    "너굴리건즈(Raccooligans)는 너구리 크루와 도시의 불빛을 되찾는 가로형 방치 RPG입니다. 밝은 항만 도시에서 시작해 12개 지역, 720개 구역을 돌파하며 새로운 동료와 장비를 만나세요.",
+    "자동 전투를 지켜보며 스킬과 동료의 역할을 조합하고, 획득한 장비와 재료로 다음 전투를 준비하세요. 전투 성과는 지역 의뢰와 시설 복구로 이어지며, 복구한 도시의 모습이 전장에도 반영됩니다.",
+    "동료의 사연, 지역의 기억첩과 인장을 모으고 탐사·도전·일일·주간 목표를 이어가세요. 진행은 기기에 저장되며 백업 내보내기와 가져오기를 지원합니다. 현재 Android 버전을 준비하고 있으며 정식 출시 일정은 추후 안내합니다."
+  ],
+  "features": [
+    "자동 전투와 수동 스킬을 조합하는 가로형 RPG",
+    "장비 강화·모듈·동료 편성으로 구성하는 성장과 전술",
+    "12개 지역·720개 구역과 지역별 보스 도전",
+    "전투 성과가 전장 풍경으로 이어지는 시설 복구와 지역 의뢰",
+    "동료 이야기·기억첩·지역 인장과 방치 보상, 일일·주간 목표"
+  ],
+  "developer": "NAHON Studio",
+  "releaseDate": "추후 공개",
+  "players": "싱글 플레이",
+  "languages": [
+    "한국어",
+    "English",
+    "日本語",
+    "简体中文",
+    "繁體中文",
+    "Español",
+    "Français",
+    "Português (Brasil)",
+    "Deutsch",
+    "Bahasa Indonesia"
+  ],
+  "tags": [
+    "방치형 RPG",
+    "자동 전투",
+    "동료 수집",
+    "도시 복구",
+    "싱글 플레이"
+  ],
+  "videos": []
+}
