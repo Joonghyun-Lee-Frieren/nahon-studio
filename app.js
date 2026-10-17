@@ -103,7 +103,7 @@ function updateAutoplay() {
 function pauseSlides() { state.paused = true; updateAutoplay(); scheduleSlide(); }
 
 function renderGames() {
-  const filtered = state.games.filter(game => state.filter === "all" || game.platforms.some(platform => PLATFORM[platform.type].category === state.filter));
+  const filtered = state.games.filter(game => state.filter === "all" || game.platforms.some(platform => (PLATFORM[platform.type].categories || [PLATFORM[platform.type].category]).includes(state.filter)));
   const statusLabels = { released: "출시", "coming-soon": "출시 예정", "in-development": "개발 중" };
   $("#game-grid").innerHTML = filtered.map(game => `
     <article class="game-card" id="game-${escapeHTML(game.id)}">

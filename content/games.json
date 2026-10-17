@@ -1,5 +1,6 @@
 {
   "games": [
+    "games/route-zero/game.json",
     "games/the-family-beyond-the-wall/game.json",
     "games/beat-turret/game.json",
     "games/magical-toy-match/game.json",
