@@ -10,6 +10,7 @@
     "games/yokai-town/game.json",
     "games/breakout-protocol/game.json",
     "games/occult-survivor/game.json",
-    "games/shh-one-shot/game.json"
+    "games/shh-one-shot/game.json",
+    "games/sword-and-backpack/game.json"
   ]
 }
