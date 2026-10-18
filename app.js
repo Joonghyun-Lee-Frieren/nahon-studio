@@ -40,7 +40,6 @@ async function loadGames() {
   } catch (error) {
     console.error(error);
     $("#content-error").hidden = false;
-    $("#intro-title").textContent = "새로운 게임을 준비하고 있습니다.";
     $("#slides").innerHTML = '<div class="loading-state">새로운 세계를 준비하고 있습니다.</div>';
     $("#hero-controls").hidden = true;
     $$(".carousel-arrow").forEach(button => { button.hidden = true; });
@@ -55,7 +54,6 @@ function renderSlides() {
   state.transition += 1;
   state.changing = false;
   state.current = 0;
-  renderIntroTitle();
   $("#slides").innerHTML = state.featured.map((game, index) => `
     <article class="slide${game.bannerFit === "contain" ? " slide--contain" : ""}${index === 0 ? " active" : ""}" id="slide-${escapeHTML(game.id)}" role="group" aria-roledescription="슬라이드" aria-label="${index + 1} / ${state.featured.length}: ${escapeHTML(game.title)}" ${index ? 'aria-hidden="true" inert' : 'aria-hidden="false"'}>
       <img class="slide-art" src="${escapeHTML(localURL(game.banner))}" alt="${escapeHTML(game.bannerAlt)}" ${index ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">
@@ -81,15 +79,6 @@ function gameTitleHTML(title, subtitleClass) {
   return parts
     ? `${escapeHTML(parts[1].trim())}<small class="${subtitleClass}">: ${escapeHTML(parts[2].trim())}</small>`
     : escapeHTML(title.trim());
-}
-
-function renderIntroTitle() {
-  const title = state.featured[state.current]?.title;
-  if (!title) {
-    $("#intro-title").textContent = "곧 새로운 게임으로 만나요.";
-    return;
-  }
-  $("#intro-title").innerHTML = gameTitleHTML(title, "intro-subtitle");
 }
 
 function primeSlide(index) {
@@ -137,7 +126,6 @@ async function showSlide(index, announce = true) {
     tab.setAttribute("aria-pressed", String(i === state.current));
   });
   $("#slide-current").textContent = pad(state.current + 1);
-  renderIntroTitle();
   if (announce) $("#slide-announcement").textContent = `${state.current + 1} / ${state.featured.length}: ${state.featured[state.current].title}`;
   state.changing = false;
   revealSlideTab();
