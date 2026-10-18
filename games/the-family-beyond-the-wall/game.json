@@ -8,9 +8,9 @@
   "status": "in-development",
   "featured": true,
   "demo": false,
-  "banner": "games/the-family-beyond-the-wall/banner-v2.webp",
-  "bannerAlt": "어두운 레트로 픽셀 아트 배너. 왼쪽에 The Family Beyond the Wall 타이틀과 헤드폰·진동선을 포함한 SOUNDS & VIBES ONLY 로고가 크게 놓이고, 오른쪽에는 뻐꾸기시계가 있는 현관과 수아·축음기가 있는 서재가 이어진다.",
-  "cover": "games/the-family-beyond-the-wall/cover-v2.webp",
+  "banner": "games/the-family-beyond-the-wall/banner-v3.webp",
+  "bannerAlt": "매우 어두운 레트로 픽셀 아트 배너. 왼쪽의 The Family Beyond the Wall 타이틀과 헤드폰·진동선이 있는 SOUNDS & VIBES ONLY 로고는 선명하게 보인다. 오른쪽 현관과 서재는 짙은 그림자에 잠겨 있고, 축음기 옆에는 얼굴과 옷의 세부가 드러나지 않는 검은 사람 실루엣만 서 있다.",
+  "cover": "games/the-family-beyond-the-wall/cover-v3.webp",
   "bannerFit": "contain",
   "platforms": [
     {
@@ -20,8 +20,8 @@
   ],
   "screenshots": [
     {
-      "src": "games/the-family-beyond-the-wall/banner-v2.webp",
-      "alt": "어두운 레트로 픽셀 아트 배너. 왼쪽에 The Family Beyond the Wall 타이틀과 헤드폰·진동선을 포함한 SOUNDS & VIBES ONLY 로고가 크게 놓이고, 오른쪽에는 뻐꾸기시계가 있는 현관과 수아·축음기가 있는 서재가 이어진다.",
+      "src": "games/the-family-beyond-the-wall/banner-v3.webp",
+      "alt": "매우 어두운 레트로 픽셀 아트 배너. 왼쪽의 The Family Beyond the Wall 타이틀과 헤드폰·진동선이 있는 SOUNDS & VIBES ONLY 로고는 선명하게 보인다. 오른쪽 현관과 서재는 짙은 그림자에 잠겨 있고, 축음기 옆에는 얼굴과 옷의 세부가 드러나지 않는 검은 사람 실루엣만 서 있다.",
       "caption": "프로모션 배너 · 소리와 진동으로 탐험하는 호러 어드벤처"
     },
     {
