@@ -8,9 +8,10 @@
   "status": "in-development",
   "featured": true,
   "demo": false,
-  "banner": "games/the-family-beyond-the-wall/banner.webp",
-  "bannerAlt": "짙은 남색의 레트로 픽셀 아트로 그린 낡은 집의 현관. 오른쪽에는 닫힌 문과 빛이 새는 틈이 있고, 그 옆 벽에는 뻐꾸기시계와 작은 수납장이 놓여 있다.",
-  "cover": "games/the-family-beyond-the-wall/banner.webp",
+  "banner": "games/the-family-beyond-the-wall/banner-v2.webp",
+  "bannerAlt": "어두운 레트로 픽셀 아트 배너. 왼쪽에 The Family Beyond the Wall 타이틀과 헤드폰·진동선을 포함한 SOUNDS & VIBES ONLY 로고가 크게 놓이고, 오른쪽에는 뻐꾸기시계가 있는 현관과 수아·축음기가 있는 서재가 이어진다.",
+  "cover": "games/the-family-beyond-the-wall/cover-v2.webp",
+  "bannerFit": "contain",
   "platforms": [
     {
       "type": "steam",
@@ -18,6 +19,11 @@
     }
   ],
   "screenshots": [
+    {
+      "src": "games/the-family-beyond-the-wall/banner-v2.webp",
+      "alt": "어두운 레트로 픽셀 아트 배너. 왼쪽에 The Family Beyond the Wall 타이틀과 헤드폰·진동선을 포함한 SOUNDS & VIBES ONLY 로고가 크게 놓이고, 오른쪽에는 뻐꾸기시계가 있는 현관과 수아·축음기가 있는 서재가 이어진다.",
+      "caption": "프로모션 배너 · 소리와 진동으로 탐험하는 호러 어드벤처"
+    },
     {
       "src": "games/the-family-beyond-the-wall/screenshot-01.webp",
       "alt": "어두운 현관을 배경으로 영문 제목 The Family Beyond the Wall과 작은 한글 제목 벽 너머의 가족, SOUNDS & VIBES ONLY 로고가 표시된 실제 타이틀 화면.",
