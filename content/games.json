@@ -1,5 +1,6 @@
 {
   "games": [
+    "games/yokai-defense/game.json",
     "games/my-ai-empire/game.json",
     "games/route-zero/game.json",
     "games/the-family-beyond-the-wall/game.json",
