@@ -242,6 +242,11 @@ button:disabled {
   isolation:isolate;
 }
 
+#slide-announcement {
+  top:0;
+  left:0;
+}
+
 .slides {
   position:relative;
   min-height:560px;
@@ -1167,8 +1172,10 @@ button:disabled {
   .intro p {
     font-size:12px;
   }
-  .slides {
+  .showcase {
     --banner-image-height:calc((100vw - 64px) * .5625);
+  }
+  .slides {
     min-height:0;
     height:calc(var(--banner-image-height) + 400px);
   }
@@ -1344,8 +1351,6 @@ button:disabled {
   }
   .showcase {
     border-radius:8px;
-  }
-  .slides {
     --banner-image-height:calc((100vw - 40px) * .5625);
   }
   .slide-copy,
