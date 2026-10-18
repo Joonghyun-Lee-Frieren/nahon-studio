@@ -8,8 +8,8 @@
   "status": "in-development",
   "featured": false,
   "demo": false,
-  "banner": "games/shh-one-shot/banner.webp",
-  "bannerAlt": "원형 저격 스코프 안으로 교각 위 열차와 표적을 관측하는 남색·크림색 스크린프린트 콘셉트 아트. 실제 플레이 스크린샷은 갤러리에 별도로 제공합니다.",
+  "banner": "games/shh-one-shot/banner-scope-action.webp",
+  "bannerAlt": "달리는 병행 열차에서 저격총의 스코프로 이동 중인 표적을 조준하는 역동적인 1인칭 콘셉트 아트. 기울어진 시점, 빠르게 스치는 교각과 대각선 철로가 속도감을 만듭니다.",
   "cover": "games/shh-one-shot/cover.webp",
   "platforms": [
     {
