@@ -1,9 +1,9 @@
 {
   "id": "route-zero",
-  "title": "ROUTE ZERO: SURVIVAL EXPRESS",
-  "heroTitle": "ROUTE ZERO\nSURVIVAL EXPRESS",
+  "title": "LASTLIGHT EXPRESS",
+  "heroTitle": "LASTLIGHT\nEXPRESS",
   "tagline": "다음 역까지, 함께 살아남아라.",
-  "description": "기차를 타고 고립된 역을 탐험하는 협동 생존 모험. 2~6인 팀으로 퍼즐을 풀고 물자를 모아, 출발 전에 열차로 돌아오세요. 현재 공개 베타로 플레이할 수 있습니다.",
+  "description": "라스트라이트 익스프레스. 기차를 타고 고립된 역을 탐험하는 협동 생존 모험. 2~6인 팀으로 퍼즐을 풀고 물자를 모아, 출발 전에 열차로 돌아오세요. 현재 공개 베타로 플레이할 수 있습니다.",
   "genre": "SURVIVAL · CO-OP ADVENTURE",
   "status": "released",
   "featured": true,
@@ -14,19 +14,19 @@
   "platforms": [
     {
       "type": "roblox",
-      "url": "https://www.roblox.com/games/115115985191920/ROUTE-ZERO-SURVIVAL-EXPRESS"
+      "url": "https://www.roblox.com/games/115115985191920/LASTLIGHT-EXPRESS"
     }
   ],
   "screenshots": [
     {
-      "src": "games/route-zero/screenshot-01.webp",
-      "alt": "기차와 승강장, 출발 전광판이 보이는 중앙역의 게임 화면",
-      "caption": "중앙역 · 직업을 고르고 동료와 같은 열차에 탑승하세요."
+      "src": "games/route-zero/screenshot-01-lastlight.webp",
+      "alt": "LASTLIGHT EXPRESS 로고와 낮의 공식 기차 키 아트를 보여 주는 실제 게임 로딩 화면",
+      "caption": "LASTLIGHT EXPRESS · 새 제목과 공식 키 아트를 적용한 인게임 로딩 화면."
     },
     {
-      "src": "games/route-zero/screenshot-02.webp",
-      "alt": "청록빛 신호 고리가 펼쳐진 터널 입구로 향하는 열차의 게임 내 이동 연출",
-      "caption": "노선 공명 · 공중 철길과 터널을 지나 다음 역으로 향합니다."
+      "src": "games/route-zero/screenshot-02-lastlight.webp",
+      "alt": "LASTLIGHT EXPRESS 로고와 밤의 기차 키 아트를 보여 주는 다음 역 이동 대기 화면",
+      "caption": "다음 역으로 · 밤 테마의 이동 대기 UI. 배경은 공식 키 아트입니다."
     },
     {
       "src": "games/route-zero/screenshot-03.webp",
