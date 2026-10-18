@@ -198,17 +198,29 @@ button:disabled {
 
 .intro h1 {
   margin:0;
+  flex:1;
+  min-width:0;
+  min-height:2.5em;
+  align-content:center;
   font-size:clamp(30px,3.4vw,52px);
   font-weight:750;
   letter-spacing:-2.6px;
   line-height:1.25;
+  overflow-wrap:anywhere;
 }
 
-.intro h1 span {
-  font-weight:400;
+.intro-subtitle {
+  display:inline-block;
+  max-width:100%;
+  font-size:.54em;
+  font-weight:500;
+  line-height:1.45;
+  letter-spacing:-.02em;
+  color:var(--muted);
 }
 
 .intro p {
+  flex:none;
   margin:0 0 2px;
   color:var(--muted);
   font-size:13px;
@@ -290,16 +302,6 @@ button:disabled {
   width:19px;
   height:2px;
   background:#ff784d;
-}
-
-.slide-title {
-  overflow-wrap:anywhere;
-  margin:22px 0 15px;
-  font-size:clamp(42px,5.2vw,80px);
-  font-weight:900;
-  line-height:1.04;
-  letter-spacing:-2.5px;
-  white-space:pre-line;
 }
 
 .slide-tagline {
@@ -1045,9 +1047,6 @@ button:disabled {
   .slide-copy {
     padding-top:60px;
   }
-  .slide-title {
-    margin-top:28px;
-  }
 }
 
 @media(max-width:1100px) {
@@ -1066,9 +1065,6 @@ button:disabled {
   }
   .slide-copy {
     padding:36px 84px 130px;
-  }
-  .slide-title {
-    font-size:clamp(44px,5.8vw,64px);
   }
   .hero-controls {
     left:84px;
@@ -1140,10 +1136,6 @@ button:disabled {
   .slides {
     min-height:560px;
     height:74vw;
-  }
-  .slide-title {
-    font-size:clamp(40px,7.2vw,58px);
-    max-width:none;
   }
   .slide-copy {
     padding:36px 84px 160px;
@@ -1282,6 +1274,7 @@ button:disabled {
   .intro h1 {
     font-size:29px;
     letter-spacing:-1.8px;
+    min-height:3.75em;
   }
   .intro p {
     font-size:11px;
@@ -1301,12 +1294,6 @@ button:disabled {
     bottom:148px;
     padding:0 26px;
     max-width:none;
-  }
-  .slide-title {
-    font-size:clamp(28px,8.8vw,44px);
-    line-height:1.08;
-    letter-spacing:-1.2px;
-    margin:14px 0 0;
   }
   .slide-kicker {
     font-size:8px;
