@@ -601,6 +601,7 @@ button:disabled {
 
 .filters {
   display:flex;
+  flex-wrap:wrap;
   gap:5px;
   padding-bottom:2px;
 }
