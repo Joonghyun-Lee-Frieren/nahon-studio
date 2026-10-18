@@ -75,7 +75,9 @@ python3 scripts/validate_content.py
 
 - `index.html`: 브랜드·상단 소개·Studio 영역·검색 결과 제목 및 설명
 - `styles.css` 상단 `:root`: 포인트 컬러와 배경색
-- `assets/favicon.svg`: 브라우저 탭 아이콘
+- `assets/nahon-a1-light.webp` / `.png`: A1 밝은 해달 로고. 메인·게임 상세 페이지의 상단과 하단에서 공용으로 사용합니다. 배경은 투명하며, WebP를 우선 사용하고 PNG를 대체 형식으로 제공합니다.
+- `assets/favicon-32.png` / `favicon.ico`: 같은 해달 캐릭터의 브라우저 탭 아이콘
+- `assets/apple-touch-icon.png`: 홈 화면에 추가할 때 사용하는 아이콘
 - 사이트에 연락처가 필요하면 실제 이메일이나 공식 링크를 확인한 뒤 추가합니다.
 
 별도의 서버·데이터베이스·관리자 업로드 화면은 없습니다. 자료 변경은 GitHub의 파일 업로드 또는 Git 커밋으로 반영됩니다.
