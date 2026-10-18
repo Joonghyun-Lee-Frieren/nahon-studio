@@ -19,29 +19,29 @@
   ],
   "screenshots": [
     {
-      "src": "games/raccooligans/screenshot-01-combat.png",
-      "alt": "항만 전장에서 너구리 대장과 편성한 동료들이 철물단 적과 싸우는 자동 전투 화면",
-      "caption": "개발 중 실제 게임 화면 · 자동 전투와 스킬"
+      "src": "games/raccooligans/screenshot-01-combat-v0530.png",
+      "alt": "노을 언덕 전장에서 너구리 대장과 동료 세 명이 화물선 집행관과 싸우는 화면. 상단 정보와 중앙 전투 버튼, 커진 설정 톱니가 보입니다.",
+      "caption": "개발 중 실제 게임 화면 · 정돈된 전투 HUD와 조작 버튼"
     },
     {
-      "src": "games/raccooligans/screenshot-02-crew.png",
-      "alt": "크루 메뉴에서 정비사 토비와 방패수 모카의 출전 상태와 편성 인원을 확인하는 화면",
+      "src": "games/raccooligans/screenshot-02-crew-v0530.png",
+      "alt": "미카·토비·모카 세 동료의 역할과 출전 상태를 확인하는 크루 편성 화면",
       "caption": "개발 중 실제 게임 화면 · 역할에 맞춘 동료 편성"
     },
     {
-      "src": "games/raccooligans/screenshot-03-restoration.png",
-      "alt": "남문 항만의 발전기와 장터, 쉼터 복구 완료 및 보상 내역을 보여 주는 화면",
-      "caption": "개발 중 실제 게임 화면 · 전장 풍경으로 이어지는 도시 복구"
+      "src": "games/raccooligans/screenshot-03-restoration-v0530.png",
+      "alt": "남문 항만의 발전기·장터·쉼터 복구 완료 상태와 일일 주민 보급을 확인하는 도시 복구 화면",
+      "caption": "개발 중 실제 게임 화면 · 시설 복구와 주민 보급"
     },
     {
-      "src": "games/raccooligans/screenshot-04-memories.png",
-      "alt": "남문 항만의 기억 네 개를 모두 읽고 획득한 지역 인장을 장착한 기억첩 화면",
+      "src": "games/raccooligans/screenshot-04-memories-v0530.png",
+      "alt": "남문 항만 기억 네 개의 열람 완료와 장착 중인 지역 인장을 보여 주는 기억첩 화면",
       "caption": "개발 중 실제 게임 화면 · 지역의 기억과 인장 수집"
     },
     {
-      "src": "games/raccooligans/screenshot-05-first-boss.png",
-      "alt": "첫 보스 격파 명장면과 지급된 보상, 새 기억 및 획득 장비를 보여 주는 작전 성공 화면",
-      "caption": "개발 중 실제 게임 화면 · 보스 격파와 작전 기록"
+      "src": "games/raccooligans/screenshot-05-first-boss-v0530.png",
+      "alt": "첫 보스 격파 명장면을 다시 보는 화면. 기록 다시보기와 보상 재지급 없음 안내가 보입니다.",
+      "caption": "개발 중 실제 게임 화면 · 첫 보스 명장면 다시보기"
     }
   ],
   "about": [
