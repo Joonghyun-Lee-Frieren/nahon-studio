@@ -93,11 +93,13 @@ JSON은 큰따옴표를 사용하며 주석이나 마지막 항목 뒤 쉼표를
 | --- | --- | --- | --- |
 | `roblox` | Roblox | `https://www.roblox.com/games/실제PlaceID/` | PC · Roblox |
 | `steam` | Steam | `https://store.steampowered.com/app/실제앱ID/` | PC |
-| `stove` | STOVE | `https://store.onstove.com/ko/games/실제상품ID` | PC |
+| `stove` | STOVE | `https://store.onstove.com/ko/games/실제상품ID` | PC · STOVE |
 | `app-store` | App Store | `https://apps.apple.com/kr/app/id실제앱ID` | iOS |
 | `google-play` | Google Play | `https://play.google.com/store/apps/details?id=실제패키지명` | Android |
 
-위 주소의 한글 부분은 반드시 실제 값으로 교체합니다. 실제 링크가 없으면 `"url": ""`로 두세요. 클릭할 수 없는 `준비 중` 표시로 보입니다. 실제 주소가 있으면 플랫폼 로고 버튼을 눌러 새 탭으로 이동합니다. 출시 예정 게임의 위시리스트·사전 등록 URL도 입력할 수 있습니다.
+위 주소의 한글 부분은 반드시 실제 값으로 교체합니다. 실제 링크가 없으면 `"url": ""`로 두세요. 클릭할 수 없는 `준비 중` 표시로 보입니다. 실제 주소가 있으면 게임 목록에서 해당 플랫폼 아이콘이 컬러로 표시되며, 플랫폼 로고 버튼을 눌러 새 탭으로 이동합니다. 출시 예정 게임의 위시리스트·사전 등록 URL도 입력할 수 있습니다.
+
+STOVE 게임은 Steam 출시도 예정되어 있으므로 `{"type": "steam", "url": ""}`를 함께 등록해 `준비 중`으로 표시합니다. Steam 상품 페이지가 생기면 해당 URL을 채웁니다.
 
 `status`는 게임 전체 상태입니다. 일부 플랫폼만 나중에 출시한다면 아직 스토어 페이지가 없는 플랫폼의 URL은 비워 둡니다.
 

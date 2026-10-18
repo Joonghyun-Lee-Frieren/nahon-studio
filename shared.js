@@ -2,7 +2,7 @@
 
 // Shared content, platform and URL helpers for home and game detail pages.
 const PLATFORM = {
-  stove: { name: "STOVE", category: "pc", path: '<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8m-4-4v4m-3-12 3-2 3 2v4l-3 2-3-2V9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>' },
+  stove: { name: "STOVE", category: "pc", categories: ["pc", "stove"], path: '<rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8m-4-4v4m-3-12 3-2 3 2v4l-3 2-3-2V9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>' },
   roblox: { name: "Roblox", category: "pc", categories: ["pc", "roblox"], path: '<path fill="currentColor" fill-rule="evenodd" d="M5.6 0 24 5.6 18.4 24 0 18.4 5.6 0Zm3.9 7.7-1.8 5.8 5.8 1.8 1.8-5.8-5.8-1.8Z"/>' },
   steam: { name: "Steam", category: "pc", path: '<circle cx="16.5" cy="7.5" r="4.7" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="16.5" cy="7.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m12.4 7.7-4.5 6.5 3.5 2.2 6-4.4" fill="currentColor"/><circle cx="8.5" cy="17.2" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m1 12 8.7 3.4a1.9 1.9 0 0 1-1.5 3.5L1 16" fill="currentColor"/>' },
   "app-store": { name: "App Store", category: "ios", path: '<path d="m10 3 10 17M14 3 4 20M3 15h13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><path d="M19.5 15H22" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>' },
@@ -96,8 +96,8 @@ async function getJSON(path) {
 
 function renderStore(platform) {
   const url = storeURL(platform.url);
-  if (!url) return `<span class="store-link unavailable" aria-label="${PLATFORM[platform.type].name} 링크 준비 중">${platformName(platform.type)}<small>준비 중</small></span>`;
-  return `<a class="store-link" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer" aria-label="${PLATFORM[platform.type].name}에서 보기 (새 창)">${platformName(platform.type)}<span class="store-arrow" aria-hidden="true">↗</span></a>`;
+  if (!url) return `<span class="store-link unavailable" data-platform="${escapeHTML(platform.type)}" aria-label="${PLATFORM[platform.type].name} 링크 준비 중">${platformName(platform.type)}<small>준비 중</small></span>`;
+  return `<a class="store-link" data-platform="${escapeHTML(platform.type)}" href="${escapeHTML(url)}" target="_blank" rel="noopener noreferrer" aria-label="${PLATFORM[platform.type].name}에서 보기 (새 창)">${platformName(platform.type)}<span class="store-arrow" aria-hidden="true">↗</span></a>`;
 }
 
 function screenshots(game) {

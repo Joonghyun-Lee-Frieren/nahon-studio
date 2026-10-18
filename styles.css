@@ -761,6 +761,26 @@ button:disabled {
   height:16px;
 }
 
+.game-platforms a[data-platform="stove"] .platform-icon {
+  color:#f4542c;
+}
+
+.game-platforms a[data-platform="roblox"] .platform-icon {
+  color:#335fff;
+}
+
+.game-platforms a[data-platform="steam"] .platform-icon {
+  color:#1b6aa5;
+}
+
+.game-platforms a[data-platform="app-store"] .platform-icon {
+  color:#1685e8;
+}
+
+.game-platforms a[data-platform="google-play"] .platform-icon {
+  color:#1d9e62;
+}
+
 .store-link:hover {
   border-color:var(--ink);
   background:white;
