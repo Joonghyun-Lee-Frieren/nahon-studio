@@ -9,7 +9,7 @@ from urllib.parse import urlparse, parse_qs
 ROOT = Path(__file__).resolve().parent.parent
 errors = []
 seen_ids = set()
-PLATFORMS = {"steam", "app-store", "google-play", "roblox"}
+PLATFORMS = {"steam", "app-store", "google-play", "roblox", "stove"}
 STATUSES = {"released", "coming-soon", "in-development"}
 
 
@@ -97,7 +97,7 @@ def validate_game(file):
         seen_platforms = set()
         for platform in platforms:
             if not isinstance(platform, dict) or not isinstance(platform.get("type"), str) or platform["type"] not in PLATFORMS:
-                fail(file, "지원 플랫폼: steam / app-store / google-play / roblox")
+                fail(file, "지원 플랫폼: steam / app-store / google-play / roblox / stove")
                 continue
             if platform["type"] in seen_platforms:
                 fail(file, f"중복된 플랫폼: {platform['type']}")
