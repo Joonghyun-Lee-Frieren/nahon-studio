@@ -93,6 +93,7 @@ JSON은 큰따옴표를 사용하며 주석이나 마지막 항목 뒤 쉼표를
 | --- | --- | --- | --- |
 | `roblox` | Roblox | `https://www.roblox.com/games/실제PlaceID/` | PC · Mobile |
 | `steam` | Steam | `https://store.steampowered.com/app/실제앱ID/` | PC |
+| `stove` | STOVE | `https://store.onstove.com/ko/games/실제상품ID` | PC |
 | `app-store` | App Store | `https://apps.apple.com/kr/app/id실제앱ID` | Mobile |
 | `google-play` | Google Play | `https://play.google.com/store/apps/details?id=실제패키지명` | Mobile |
 
