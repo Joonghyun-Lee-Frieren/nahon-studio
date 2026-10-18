@@ -10,9 +10,6 @@
     "games/yokai-town/game.json",
     "games/breakout-protocol/game.json",
     "games/occult-survivor/game.json",
-    "games/orbit-of-echoes/game.json",
-    "games/moss-and-moon/game.json",
-    "games/neon-drift/game.json",
     "games/shh-one-shot/game.json"
   ]
 }

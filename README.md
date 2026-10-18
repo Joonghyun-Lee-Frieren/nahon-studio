@@ -13,7 +13,7 @@ Steam·모바일 게임을 소개하는 GitHub Pages용 정적 사이트입니�
 - 데스크톱·태블릿·모바일 반응형 레이아웃, 키보드 탐색, 모션 줄이기 설정 지원
 - 프로젝트별 JSON과 이미지 폴더로 콘텐츠 관리
 
-`demo: false`인 항목은 실제 게임 자료입니다. `demo: true` 및 **예시 프로젝트**로 표시된 게임명·설명·이미지는 레이아웃 확인용 가상 자료입니다. 스토어 URL이 비어 있으면 링크 대신 `준비 중`을 표시합니다.
+게임 자료는 각 프로젝트의 `game.json`과 이미지 폴더에서 관리합니다. 스토어 URL이 비어 있으면 링크 대신 `준비 중`을 표시합니다.
 
 ## 로컬 미리보기
 
@@ -31,7 +31,7 @@ Windows에서는 `py -m http.server 8000 --bind 127.0.0.1`을 사용할 수 있�
 
 ```text
 index.html                 홈과 스튜디오 소개 문구
-game.html                  게임 상세 페이지 (예: game.html?id=orbit-of-echoes)
+game.html                  게임 상세 페이지 (game.html?id=<게임ID>)
 styles.css                 색상·레이아웃·반응형 스타일
 game.css                   상세 페이지 스타일
 shared.js                  공용 콘텐츠 검증·플랫폼·URL 처리
@@ -47,11 +47,10 @@ games/
     cover.webp             선택: 목록용 표지
     screenshot-01.webp     게임 스크린샷
 docs/ADDING_GAMES.md        프로젝트 담당자용 등록 가이드
-docs/IMAGE_CREDITS.md       예시 이미지 생성 기록
 scripts/validate_content.py 콘텐츠 오류 검사
 ```
 
-홈의 배너 버튼·게임 이미지·게임 제목을 누르면 상세 페이지로 이동합니다. 상세 주소는 `game.html?id=<게임ID>`이며 새로고침·직접 링크·GitHub Pages 하위 경로를 지원합니다. `videos`에 실제 YouTube URL을 넣으면 영상 썸네일과 재생 버튼이 나타납니다. 현재 예시 게임에는 실제 트레일러가 없어 `준비 중`으로 표시하며, 첫 번째 예시 게임에는 3장의 콘셉트 이미지가 포함되어 있습니다.
+홈의 배너 버튼·게임 이미지·게임 제목을 누르면 상세 페이지로 이동합니다. 상세 주소는 `game.html?id=<게임ID>`이며 새로고침·직접 링크·GitHub Pages 하위 경로를 지원합니다. `videos`에 실제 YouTube URL을 넣으면 영상 썸네일과 재생 버튼이 나타납니다. 트레일러가 등록되지 않은 게임은 영상 `준비 중`으로 표시합니다.
 
 변경 후 콘텐츠 검사를 실행할 수 있습니다. Python 표준 라이브러리만 사용합니다.
 
