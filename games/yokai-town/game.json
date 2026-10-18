@@ -8,8 +8,8 @@
   "status": "in-development",
   "featured": true,
   "demo": false,
-  "banner": "games/yokai-town/banner.webp",
-  "bannerAlt": "등불이 켜진 기와집과 붉은 다리 앞에서 도깨비와 여우 요괴가 함께 큰 등을 나르는 밤 풍경",
+  "banner": "games/yokai-town/banner-gameplay-v2.webp",
+  "bannerAlt": "Yokai Town 영문 로고와 도깨비·여우 캐릭터 옆에 자원 수량과 건설·수확 버튼이 보이는 마을 플레이 화면을 크게 배치한 홍보 배너",
   "platforms": [
     {
       "type": "google-play",
@@ -72,5 +72,7 @@
     "성장",
     "수집"
   ],
-  "videos": []
+  "videos": [],
+  "cover": "games/yokai-town/cover-gameplay-v2.webp",
+  "bannerFit": "contain"
 }
