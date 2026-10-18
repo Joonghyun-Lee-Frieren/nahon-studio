@@ -153,8 +153,8 @@ button:disabled {
 }
 
 .intro {
-  padding-top:45px;
-  padding-bottom:32px;
+  padding-top:28px;
+  padding-bottom:16px;
 }
 
 .eyebrow {
@@ -175,20 +175,10 @@ button:disabled {
   flex:none;
 }
 
-.intro-row {
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:25px;
-  margin-top:19px;
-}
-
 .intro h1 {
   margin:0;
-  flex:1;
-  min-width:0;
-  min-height:2.5em;
-  align-content:center;
+  min-height:1.25em;
+  align-content:end;
   font-size:clamp(30px,3.4vw,52px);
   font-weight:750;
   letter-spacing:-2.6px;
@@ -209,15 +199,6 @@ button:disabled {
 
 .slide-subtitle {
   color:#d9e2e4;
-}
-
-.intro p {
-  flex:none;
-  margin:0 0 2px;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.8;
-  letter-spacing:-.25px;
 }
 
 .showcase {
@@ -303,23 +284,8 @@ button:disabled {
   max-width:820px;
 }
 
-.slide-kicker {
-  font-size:10px;
-  letter-spacing:2px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.slide-kicker:before {
-  content:"";
-  width:19px;
-  height:2px;
-  background:#ff784d;
-}
-
 .slide-title {
-  margin:18px 0 0;
+  margin:0;
   font-size:clamp(26px,2.5vw,38px);
   font-weight:800;
   letter-spacing:-1px;
@@ -1080,9 +1046,6 @@ button:disabled {
     font-size:36px;
     letter-spacing:-1.7px;
   }
-  .intro p {
-    font-size:11px;
-  }
   .slides {
     min-height:510px;
   }
@@ -1146,18 +1109,11 @@ button:disabled {
     display:none;
   }
   .intro {
-    padding-top:35px;
-  }
-  .intro-row {
-    align-items:flex-start;
-    flex-direction:column;
-    gap:14px;
+    padding-top:24px;
   }
   .intro h1 {
     font-size:37px;
-  }
-  .intro p {
-    font-size:12px;
+    min-height:2.5em;
   }
   .showcase {
     --banner-image-height:calc((100vw - 64px) * .5625);
@@ -1186,7 +1142,6 @@ button:disabled {
   }
   .slide-title {
     font-size:clamp(22px,4vw,30px);
-    margin-top:14px;
   }
   .slide:after,
   .slide--contain:after {
@@ -1306,25 +1261,16 @@ button:disabled {
     font-size:12px;
   }
   .intro {
-    padding-top:29px;
-    padding-bottom:25px;
+    padding-top:22px;
+    padding-bottom:14px;
   }
   .eyebrow {
     font-size:8px;
     letter-spacing:1.4px;
   }
-  .intro-row {
-    margin-top:15px;
-    gap:12px;
-  }
   .intro h1 {
     font-size:29px;
     letter-spacing:-1.8px;
-    min-height:3.75em;
-  }
-  .intro p {
-    font-size:11px;
-    line-height:1.7;
   }
   .showcase {
     border-radius:8px;
@@ -1333,10 +1279,6 @@ button:disabled {
   .slide-copy,
   .slide--contain .slide-copy {
     padding:0 26px;
-  }
-  .slide-kicker {
-    font-size:8px;
-    letter-spacing:1.6px;
   }
   .slide-tagline {
     font-size:12px;
@@ -1365,9 +1307,6 @@ button:disabled {
   }
   .carousel-arrow-prev { left:12px; }
   .carousel-arrow-next { right:12px; }
-  .slide-kicker {
-    letter-spacing:1.3px;
-  }
   .hero-controls {
     left:20px;
     right:20px;

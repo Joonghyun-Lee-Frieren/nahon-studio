@@ -60,7 +60,6 @@ function renderSlides() {
     <article class="slide${game.bannerFit === "contain" ? " slide--contain" : ""}${index === 0 ? " active" : ""}" id="slide-${escapeHTML(game.id)}" role="group" aria-roledescription="슬라이드" aria-label="${index + 1} / ${state.featured.length}: ${escapeHTML(game.title)}" ${index ? 'aria-hidden="true" inert' : 'aria-hidden="false"'}>
       <img class="slide-art" src="${escapeHTML(localURL(game.banner))}" alt="${escapeHTML(game.bannerAlt)}" ${index ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">
       <div class="slide-copy">
-        <div class="slide-kicker">${pad(index + 1)} / FEATURED GAME</div>
         <h2 class="slide-title">${gameTitleHTML(game.title, "slide-subtitle")}</h2>
         <p class="slide-tagline">${escapeHTML(game.tagline)}</p>
         <a class="hero-link" href="${escapeHTML(gameURL(game.id))}">게임 살펴보기 <span aria-hidden="true">↗</span></a>
