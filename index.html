@@ -9,8 +9,10 @@
   <meta property="og:title" content="NAHON Studio — 작은 상상, 새로운 세계">
   <meta property="og:description" content="NAHON Studio의 Steam·모바일 게임과 새로운 이야기를 만나보세요.">
   <title>NAHON Studio — 작은 상상, 새로운 세계</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="stylesheet" href="./styles.css?v=a9e660ce">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css?v=a1-otter-v1">
   <script src="./shared.js?v=e13bdb72" defer></script>
   <script src="./app.js?v=d4d46600" defer></script>
 </head>
@@ -18,8 +20,10 @@
   <a class="skip-link" href="#games">게임 목록으로 건너뛰기</a>
   <header class="site-header wrap">
     <a class="brand" href="#" aria-label="NAHON Studio 홈">
-      <svg class="brand-symbol" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="7" fill="currentColor"/><path d="M9 26V10h5l8 10V10h5v16h-5l-8-10v10z" fill="#fff"/></svg>
-      <span>NAHON<span class="brand-studio">STUDIO</span></span>
+      <picture>
+        <source srcset="./assets/nahon-a1-light.webp" type="image/webp">
+        <img class="brand-logo" src="./assets/nahon-a1-light.png" alt="NAHON STUDIO" width="768" height="296" fetchpriority="high">
+      </picture>
     </a>
     <nav aria-label="메인 메뉴">
       <a class="nav-link" href="#games">Games</a>
@@ -81,7 +85,12 @@
   </main>
 
   <footer class="site-footer wrap">
-    <a class="footer-brand" href="#">NAHON <span>STUDIO</span></a>
+    <a class="footer-brand" href="#" aria-label="NAHON Studio 홈">
+      <picture>
+        <source srcset="./assets/nahon-a1-light.webp" type="image/webp">
+        <img class="brand-logo" src="./assets/nahon-a1-light.png" alt="NAHON STUDIO" width="768" height="296" loading="lazy" decoding="async">
+      </picture>
+    </a>
     <p>© <span id="year">2026</span> NAHON Studio. All rights reserved.</p>
     <a class="back-top" href="#">Back to top <span aria-hidden="true">↑</span></a>
   </footer>

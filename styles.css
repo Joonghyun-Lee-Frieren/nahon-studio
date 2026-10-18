@@ -107,27 +107,14 @@ button:disabled {
 }
 
 .brand {
-  display:flex;
+  display:inline-flex;
   align-items:center;
-  gap:10px;
-  font-size:25px;
-  font-weight:900;
-  letter-spacing:-1px;
-  line-height:1;
+  flex-shrink:0;
 }
 
-.brand-symbol {
-  width:38px;
-  height:38px;
-  color:var(--orange);
-}
-
-.brand-studio {
-  display:block;
-  font-size:9px;
-  letter-spacing:4.9px;
-  margin-top:6px;
-  font-weight:600;
+.brand-logo {
+  width:196px;
+  height:auto;
 }
 
 .site-header nav {
@@ -931,16 +918,13 @@ button:disabled {
 }
 
 .footer-brand {
-  font-size:17px;
-  font-weight:900;
-  letter-spacing:-.7px;
+  display:inline-flex;
+  align-items:center;
+  flex-shrink:0;
 }
 
-.footer-brand span {
-  font-size:9px;
-  font-weight:500;
-  letter-spacing:1px;
-  margin-left:4px;
+.footer-brand .brand-logo {
+  width:142px;
 }
 
 .site-footer p {
@@ -1115,6 +1099,9 @@ button:disabled {
   .site-header {
     height:86px;
   }
+  .brand-logo {
+    width:176px;
+  }
   .site-header nav {
     gap:24px;
   }
@@ -1266,18 +1253,8 @@ button:disabled {
   .site-header {
     height:78px;
   }
-  .brand {
-    font-size:21px;
-    gap:8px;
-  }
-  .brand-symbol {
-    width:33px;
-    height:33px;
-  }
-  .brand-studio {
-    font-size:8px;
-    letter-spacing:4px;
-    margin-top:4px;
+  .brand-logo {
+    width:154px;
   }
   .site-header nav {
     gap:22px;
@@ -1485,9 +1462,6 @@ button:disabled {
   }
   .site-footer p {
     font-size:9px;
-  }
-  .footer-brand {
-    font-size:16px;
   }
   .gallery {
     width:calc(100% - 20px);
