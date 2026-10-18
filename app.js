@@ -2,7 +2,7 @@
 
 // Content is intentionally independent from the layout. See docs/ADDING_GAMES.md.
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const state = { games: [], featured: [], current: 0, filter: "all", timer: null, paused: reducedMotion.matches, hovering: false, loading: false };
+const state = { games: [], featured: [], current: 0, filter: "all", timer: null, paused: reducedMotion.matches, hovering: false, loading: false, changing: false, transition: 0 };
 
 async function loadGames() {
   if (state.loading) return;
@@ -23,8 +23,8 @@ async function loadGames() {
     }
     if (manifest.games.length && !games.length) throw new Error("No valid games found.");
     state.games = games;
-    state.featured = games.filter(game => game.featured).slice(0, 3);
-    if (!state.featured.length) state.featured = games.slice(0, 1);
+    // Every registered game joins the carousel. Featured games appear first.
+    state.featured = [...games.filter(game => game.featured), ...games.filter(game => !game.featured)];
     $("#demo-note").hidden = !games.some(game => game.demo);
     $("#game-count").textContent = games.length;
     renderSlides();
@@ -42,6 +42,7 @@ async function loadGames() {
     $("#content-error").hidden = false;
     $("#slides").innerHTML = '<div class="loading-state">새로운 세계를 준비하고 있습니다.</div>';
     $("#hero-controls").hidden = true;
+    $$(".carousel-arrow").forEach(button => { button.hidden = true; });
   } finally {
     $("#game-grid").setAttribute("aria-busy", "false");
     state.loading = false;
@@ -50,6 +51,8 @@ async function loadGames() {
 
 function renderSlides() {
   clearTimeout(state.timer);
+  state.transition += 1;
+  state.changing = false;
   state.current = 0;
   $("#slides").innerHTML = state.featured.map((game, index) => `
     <article class="slide${index === 0 ? " active" : ""}" id="slide-${escapeHTML(game.id)}" role="group" aria-roledescription="슬라이드" aria-label="${index + 1} / ${state.featured.length}: ${escapeHTML(game.title)}" ${index ? 'aria-hidden="true" inert' : 'aria-hidden="false"'}>
@@ -62,17 +65,50 @@ function renderSlides() {
         ${game.demo ? '<span class="hero-demo">예시 프로젝트 · 콘셉트 아트</span>' : ""}
       </div>
     </article>`).join("") || '<div class="loading-state">곧 새로운 게임으로 만나요.</div>';
-  $("#slide-tabs").innerHTML = state.featured.map((game, index) => `<button type="button" class="slide-tab${index === 0 ? " active" : ""}" aria-label="${escapeHTML(game.title)} 배너 보기" aria-pressed="${index === 0}" aria-controls="slide-${escapeHTML(game.id)}" data-slide="${index}"><span class="slide-tab-number">${pad(index + 1)}</span><span class="slide-tab-title">${escapeHTML(game.title)}</span></button>`).join("");
+  $("#slide-tabs").innerHTML = state.featured.map((game, index) => `<button type="button" class="slide-tab${index === 0 ? " active" : ""}" aria-label="${escapeHTML(game.title)} 배너 보기" aria-pressed="${index === 0}" aria-controls="slide-${escapeHTML(game.id)}" data-slide="${index}"><img class="slide-tab-preview" src="${escapeHTML(localURL(game.cover || game.banner))}" alt="" loading="lazy"><span class="slide-tab-copy"><span class="slide-tab-number">${pad(index + 1)}</span><span class="slide-tab-title">${escapeHTML(game.title)}</span></span></button>`).join("");
   $("#hero-controls").hidden = state.featured.length < 2;
+  $$(".carousel-arrow").forEach(button => { button.hidden = state.featured.length < 2; });
   $("#slide-current").textContent = "01";
   $("#slide-total").textContent = pad(state.featured.length);
   updateAutoplay();
+  primeNeighbors();
   scheduleSlide();
 }
 
-function showSlide(index, announce = true) {
+function primeSlide(index) {
+  const count = state.featured.length;
+  if (!count) return Promise.resolve();
+  const image = $$(".slide-art")[(index + count) % count];
+  if (!image) return Promise.resolve();
+  image.loading = "eager";
+  return image.decode().catch(() => {});
+}
+
+function primeNeighbors() {
+  if (state.featured.length > 1) {
+    void primeSlide(state.current + 1);
+    void primeSlide(state.current - 1);
+  }
+}
+
+function revealSlideTab() {
+  const rail = $("#slide-tabs");
+  const button = rail.children[state.current];
+  if (!button) return;
+  const left = button.offsetLeft - (rail.clientWidth - button.offsetWidth) / 2;
+  // Scroll only the thumbnail rail; autoplay must never move the page.
+  rail.scrollTo({ left: Math.max(0, Math.min(left, rail.scrollWidth - rail.clientWidth)), behavior: reducedMotion.matches ? "instant" : "smooth" });
+}
+
+async function showSlide(index, announce = true) {
   if (!state.featured.length) return;
   state.current = (index + state.featured.length) % state.featured.length;
+  const transition = ++state.transition;
+  state.changing = true;
+  clearTimeout(state.timer);
+  // Keep the previous image visible until the next one is decoded.
+  await primeSlide(state.current);
+  if (transition !== state.transition) return;
   $$(".slide").forEach((slide, i) => {
     const active = i === state.current;
     slide.classList.toggle("active", active);
@@ -85,12 +121,15 @@ function showSlide(index, announce = true) {
   });
   $("#slide-current").textContent = pad(state.current + 1);
   if (announce) $("#slide-announcement").textContent = `${state.current + 1} / ${state.featured.length}: ${state.featured[state.current].title}`;
+  state.changing = false;
+  revealSlideTab();
+  primeNeighbors();
   scheduleSlide();
 }
 
 function scheduleSlide() {
   clearTimeout(state.timer);
-  if (state.featured.length > 1 && !state.paused && !state.hovering && !document.hidden) {
+  if (state.featured.length > 1 && !state.changing && !state.paused && !state.hovering && !document.hidden) {
     state.timer = setTimeout(() => showSlide(state.current + 1, false), 6500);
   }
 }
@@ -134,8 +173,10 @@ $("#slide-tabs").addEventListener("click", event => {
   const button = event.target.closest("[data-slide]");
   if (button) { pauseSlides(); showSlide(Number(button.dataset.slide)); }
 });
-$("#slide-prev").addEventListener("click", () => { pauseSlides(); showSlide(state.current - 1); });
-$("#slide-next").addEventListener("click", () => { pauseSlides(); showSlide(state.current + 1); });
+$$('[data-slide-step]').forEach(button => button.addEventListener("click", () => {
+  pauseSlides();
+  void showSlide(state.current + Number(button.dataset.slideStep));
+}));
 $("#autoplay").addEventListener("click", () => { state.paused = !state.paused; updateAutoplay(); scheduleSlide(); });
 $(".showcase").addEventListener("mouseenter", () => { state.hovering = true; scheduleSlide(); });
 $(".showcase").addEventListener("mouseleave", () => { state.hovering = false; scheduleSlide(); });
@@ -143,18 +184,31 @@ $(".showcase").addEventListener("focusin", event => {
   if (!event.currentTarget.contains(event.relatedTarget) && !event.target.closest("#autoplay")) pauseSlides();
 });
 $(".showcase").addEventListener("keydown", event => {
-  if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
-  event.preventDefault(); pauseSlides(); showSlide(state.current + (event.key === "ArrowRight" ? 1 : -1));
+  if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key) || !state.featured.length) return;
+  event.preventDefault();
+  const tab = event.target.closest("[data-slide]");
+  const from = tab ? Number(tab.dataset.slide) : state.current;
+  const next = event.key === "Home" ? 0 : event.key === "End" ? state.featured.length - 1 : from + (event.key === "ArrowRight" ? 1 : -1);
+  pauseSlides();
+  void showSlide(next);
+  if (tab) $$(".slide-tab")[(next + state.featured.length) % state.featured.length].focus({ preventScroll: true });
 });
 let touchStart = null;
-$(".showcase").addEventListener("touchstart", event => { touchStart = { x: event.changedTouches[0].clientX, y: event.changedTouches[0].clientY }; }, { passive: true });
+$(".showcase").addEventListener("touchstart", event => {
+  touchStart = event.touches.length === 1 && !event.target.closest(".hero-controls, .carousel-arrow")
+    ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+}, { passive: true });
 $(".showcase").addEventListener("touchend", event => {
   if (!touchStart) return;
   const dx = event.changedTouches[0].clientX - touchStart.x;
   const dy = event.changedTouches[0].clientY - touchStart.y;
-  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) { pauseSlides(); showSlide(state.current + (dx < 0 ? 1 : -1)); }
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    if (event.cancelable) event.preventDefault();
+    pauseSlides();
+    void showSlide(state.current + (dx < 0 ? 1 : -1));
+  }
   touchStart = null;
-}, { passive: true });
+}, { passive: false });
 $(".showcase").addEventListener("touchcancel", () => { touchStart = null; });
 $(".filters").addEventListener("click", event => { const button = event.target.closest("[data-filter]"); if (button) setFilter(button.dataset.filter); });
 document.addEventListener("visibilitychange", scheduleSlide);

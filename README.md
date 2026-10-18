@@ -6,7 +6,7 @@ Steam·모바일 게임을 소개하는 GitHub Pages용 정적 사이트입니�
 - 저장소: [Joonghyun-Lee-Frieren/nahon-studio](https://github.com/Joonghyun-Lee-Frieren/nahon-studio)
 - 다른 게임 프로젝트에 전달: [짧은 업로드 지침](docs/UPLOAD_GAME_SHORT.md)
 
-- 큰 추천 게임 슬라이더: 6.5초 자동 전환, 직접 선택, 이전/다음, 일시정지, 터치 스와이프
+- 모든 게임이 자동 포함되는 배너: 6.5초 자동 전환, 가로 스크롤 썸네일, 양옆·하단 이동 화살표, 일시정지, 터치 스와이프
 - 게임 목록: 전체 / PC / Mobile 필터, 플랫폼 아이콘과 스토어 링크
 - 게임별 상세 페이지: 큰 미디어 뷰어, 스크린샷 썸네일, YouTube 영상, 게임 정보·긴 소개·스토어 버튼
 - 이미지 갤러리: 이전/다음, 썸네일 선택, 확대 보기, 방향키·터치 스와이프, Esc 닫기

@@ -10,9 +10,9 @@
   <meta property="og:description" content="NAHON Studio의 Steam·모바일 게임과 새로운 이야기를 만나보세요.">
   <title>NAHON Studio — 작은 상상, 새로운 세계</title>
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=309a1854">
   <script src="./shared.js?v=c73d5b90" defer></script>
-  <script src="./app.js?v=a67da739" defer></script>
+  <script src="./app.js?v=92b50036" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#games">게임 목록으로 건너뛰기</a>
@@ -37,15 +37,17 @@
       </div>
     </section>
 
-    <section class="showcase wrap" aria-label="추천 게임" aria-roledescription="캐러셀" tabindex="0">
+    <section class="showcase wrap" aria-label="게임 배너" aria-roledescription="캐러셀" tabindex="0">
       <div id="slides" class="slides"><div class="loading-state">새로운 세계를 불러오는 중입니다.</div></div>
+      <button id="slide-prev-side" class="carousel-arrow carousel-arrow-prev" type="button" data-slide-step="-1" aria-label="이전 게임 배너 (왼쪽)" aria-controls="slides" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 5-7 7 7 7"/></svg></button>
+      <button id="slide-next-side" class="carousel-arrow carousel-arrow-next" type="button" data-slide-step="1" aria-label="다음 게임 배너 (오른쪽)" aria-controls="slides" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 5 7 7-7 7"/></svg></button>
       <div class="hero-controls" id="hero-controls" hidden>
         <div class="slide-tabs" id="slide-tabs" role="group" aria-label="배너 선택"></div>
         <div class="slide-actions">
           <button id="autoplay" class="round-button pause-button" type="button" aria-label="배너 자동 재생 일시정지"><span aria-hidden="true">Ⅱ</span></button>
-          <span class="slide-count"><span id="slide-current">01</span><span class="count-divider">/</span><span id="slide-total">03</span></span>
-          <button id="slide-prev" class="round-button" type="button" aria-label="이전 게임 배너">←</button>
-          <button id="slide-next" class="round-button" type="button" aria-label="다음 게임 배너">→</button>
+          <span class="slide-count"><span id="slide-current">01</span><span class="count-divider">/</span><span id="slide-total">01</span></span>
+          <button id="slide-prev" class="round-button" type="button" data-slide-step="-1" aria-label="이전 게임 배너">←</button>
+          <button id="slide-next" class="round-button" type="button" data-slide-step="1" aria-label="다음 게임 배너">→</button>
         </div>
       </div>
       <span id="slide-announcement" class="sr-only" role="status" aria-live="polite"></span>
