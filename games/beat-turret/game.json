@@ -2,15 +2,15 @@
   "id": "beat-turret",
   "title": "BEAT TURRET",
   "heroTitle": "BEAT\nTURRET",
-  "tagline": "박자를 쏘고, 침묵에 잠긴 도시를 깨워라.",
+  "tagline": "박자에 맞춰 포탑을 쏘는 리듬 디펜스.",
   "description": "카세트와 LP, 드럼머신을 포탑으로 바꾸는 리듬 디펜스. 박자에 맞춘 포격과 BASS 충격파로 적을 막고, 장비를 성장시켜 도시의 음악을 되찾으세요.",
   "genre": "RHYTHM · DEFENSE",
   "status": "coming-soon",
   "featured": true,
   "demo": false,
-  "banner": "games/beat-turret/banner.webp",
-  "bannerAlt": "청록색과 보랏빛 조명, 거대한 BASS 스피커가 둘러싼 Beat Turret의 게임 내 공연장 배경",
-  "cover": "games/beat-turret/cover.webp",
+  "banner": "games/beat-turret/promo-overview-v2.webp",
+  "bannerAlt": "BEAT TURRET 영문 로고와 실제 전투·선곡 화면을 배치한 소개 이미지. 박자 입력으로 포탑을 쏘는 리듬 디펜스이며 41곡, 장비 36모델, 세 난이도를 안내합니다.",
+  "cover": "games/beat-turret/promo-overview-v2.webp",
   "platforms": [
     {
       "type": "google-play",
@@ -19,19 +19,34 @@
   ],
   "screenshots": [
     {
-      "src": "games/beat-turret/screenshot-01.webp",
-      "alt": "한국어 선곡 화면에서 Amber Signal과 카세트 포탑, 일반부터 전설까지의 장비 모델을 선택하는 모습",
-      "caption": "곡을 고르고 나만의 음악 장비를 준비하세요 · 실제 게임 화면"
+      "src": "games/beat-turret/promo-overview-v2.webp",
+      "alt": "BEAT TURRET 영문 로고와 실제 전투·선곡 화면을 배치한 소개 이미지. 박자 입력으로 포탑을 쏘는 리듬 디펜스이며 41곡, 장비 36모델, 세 난이도를 안내합니다.",
+      "caption": "BEAT TURRET · 박자에 맞춰 포탑을 쏘는 리듬 디펜스 / 실제 화면을 조합한 소개"
     },
     {
       "src": "games/beat-turret/screenshot-02.webp",
-      "alt": "카세트 포탑이 적을 향해 공격하고 두 리듬 패드에 BASS 홀드와 퍼펙트 타이밍이 표시된 가로 전투 화면",
-      "caption": "드럼 포격, LP 반격, BASS 릴리즈가 이어지는 전투 · 실제 게임 화면"
+      "alt": "카세트 포탑의 조준과 적, PERFECT 판정, 두 리듬 패드와 BASS 홀드가 보이는 실제 전투 화면",
+      "caption": "실제 전투 화면 · 타이밍 입력이 포탑의 공격으로 이어집니다"
     },
     {
-      "src": "games/beat-turret/screenshot-03.webp",
-      "alt": "레코드 라이브러리의 도시 지도에 복원된 첫 구역과 완주한 세 곡이 표시된 모습",
-      "caption": "공연을 완주해 한 구역씩 되찾는 도시의 불빛 · 실제 게임 화면"
+      "src": "games/beat-turret/promo-controls-v2.webp",
+      "alt": "실제 전투 화면 옆에서 TAP 포격, SCRATCH 스와이프 반격, BASS 홀드 후 릴리즈를 설명한 이미지",
+      "caption": "플레이 방식 · 탭으로 요격, 스크래치로 반격, BASS로 충격파"
+    },
+    {
+      "src": "games/beat-turret/promo-records-v2.webp",
+      "alt": "실제 선곡 화면과 41곡 중 Amber Signal, Midnight Groove, Prism Overload 등 8곡의 곡명·BPM·길이를 정리한 음악 소개 이미지",
+      "caption": "41곡의 힙합·일렉트로니카 · 실제 선곡 화면과 수록곡 목록"
+    },
+    {
+      "src": "games/beat-turret/screenshot-01.webp",
+      "alt": "Amber Signal 선곡과 카세트 장비 등급, 미리듣기, 난이도 선택과 시작 버튼이 보이는 실제 선곡 화면",
+      "caption": "실제 선곡·장비 선택 화면 · 클리어로 다음 곡을 해금하세요"
+    },
+    {
+      "src": "games/beat-turret/promo-equipment-v2.webp",
+      "alt": "실제 에셋으로 구성한 카세트, 테이프 덱, CD, LP DJ, 신디사이저, 드럼머신, 그리드 컨트롤러, 스피커, BASS 스피커의 9개 장비 계열과 총 36모델 소개",
+      "caption": "수집과 성장 · 음악 장비 9개 계열, 4개 등급, 총 36개 모델"
     }
   ],
   "about": [
@@ -71,5 +86,6 @@
     "힙합",
     "일렉트로니카"
   ],
-  "videos": []
+  "videos": [],
+  "bannerFit": "contain"
 }
