@@ -1092,6 +1092,10 @@ button:disabled {
 }
 
 @media(max-width:800px) {
+  /* The image contains a title and gameplay; the bottom buttons and swipe remain available. */
+  .showcase:has(#slide-magical-toy-match.active) .carousel-arrow {
+    display:none;
+  }
   .site-header {
     height:86px;
   }
