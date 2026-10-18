@@ -8,8 +8,9 @@
   "status": "in-development",
   "featured": false,
   "demo": false,
-  "banner": "games/breakout-protocol/banner.webp",
-  "bannerAlt": "달빛이 비치는 감옥 안뜰의 픽셀 아트. 양옆의 돌벽과 철창 사이로 멀리 담장과 불이 켜진 감시탑이 보인다. 게임의 실제 타이틀 배경을 사용했다.",
+  "banner": "games/breakout-protocol/cover.webp",
+  "bannerFit": "contain",
+  "bannerAlt": "Breakout Protocol 로고 아래, 달빛이 비치는 감옥 안뜰에 주황색 수감복을 입은 네 인물이 서 있는 대표 키 아트.",
   "cover": "games/breakout-protocol/cover.webp",
   "platforms": [
     {

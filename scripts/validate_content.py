@@ -82,6 +82,8 @@ def validate_game(file):
             fail(file, f"{field}는 비어 있지 않은 문자열이어야 합니다.")
     if "heroTitle" in game and not isinstance(game["heroTitle"], str):
         fail(file, "heroTitle은 문자열이어야 합니다.")
+    if "bannerFit" in game and game["bannerFit"] not in ["cover", "contain"]:
+        fail(file, "bannerFit은 cover 또는 contain이어야 합니다.")
     if not isinstance(game.get("status"), str) or game["status"] not in STATUSES:
         fail(file, "status는 released / coming-soon / in-development 중 하나입니다.")
     for field in ["demo", "featured"]:

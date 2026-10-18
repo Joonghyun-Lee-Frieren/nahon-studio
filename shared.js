@@ -64,6 +64,7 @@ function validateGame(game) {
   if (!["released", "coming-soon", "in-development"].includes(game.status)) throw new Error("Invalid game status.");
   if (typeof game.demo !== "boolean" || typeof game.featured !== "boolean") throw new Error("demo and featured must be booleans.");
   if (game.heroTitle !== undefined && typeof game.heroTitle !== "string") throw new Error("heroTitle must be text.");
+  if (game.bannerFit !== undefined && !["cover", "contain"].includes(game.bannerFit)) throw new Error("bannerFit must be cover or contain.");
   if (!Array.isArray(game.platforms) || !game.platforms.length || game.platforms.some(p => !p || !Object.hasOwn(PLATFORM, p.type) || (p.url && !storeURL(p.url)))) throw new Error("Invalid game platforms.");
   localURL(game.banner);
   if (game.cover) localURL(game.cover);

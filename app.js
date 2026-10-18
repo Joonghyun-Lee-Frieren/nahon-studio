@@ -57,10 +57,11 @@ function renderSlides() {
   state.current = 0;
   renderIntroTitle();
   $("#slides").innerHTML = state.featured.map((game, index) => `
-    <article class="slide${index === 0 ? " active" : ""}" id="slide-${escapeHTML(game.id)}" role="group" aria-roledescription="슬라이드" aria-label="${index + 1} / ${state.featured.length}: ${escapeHTML(game.title)}" ${index ? 'aria-hidden="true" inert' : 'aria-hidden="false"'}>
+    <article class="slide${game.bannerFit === "contain" ? " slide--contain" : ""}${index === 0 ? " active" : ""}" id="slide-${escapeHTML(game.id)}" role="group" aria-roledescription="슬라이드" aria-label="${index + 1} / ${state.featured.length}: ${escapeHTML(game.title)}" ${index ? 'aria-hidden="true" inert' : 'aria-hidden="false"'}>
       <img class="slide-art" src="${escapeHTML(localURL(game.banner))}" alt="${escapeHTML(game.bannerAlt)}" ${index ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">
       <div class="slide-copy">
         <div class="slide-kicker">${pad(index + 1)} / FEATURED GAME</div>
+        <h2 class="slide-title">${gameTitleHTML(game.title, "slide-subtitle")}</h2>
         <p class="slide-tagline">${escapeHTML(game.tagline)}</p>
         <a class="hero-link" href="${escapeHTML(gameURL(game.id))}">게임 살펴보기 <span aria-hidden="true">↗</span></a>
         ${game.demo ? '<span class="hero-demo">예시 프로젝트 · 콘셉트 아트</span>' : ""}
@@ -76,16 +77,20 @@ function renderSlides() {
   scheduleSlide();
 }
 
+function gameTitleHTML(title, subtitleClass) {
+  const parts = title.trim().match(/^(.+?)\s*[:：]\s*(.+)$/s);
+  return parts
+    ? `${escapeHTML(parts[1].trim())}<small class="${subtitleClass}">: ${escapeHTML(parts[2].trim())}</small>`
+    : escapeHTML(title.trim());
+}
+
 function renderIntroTitle() {
-  const title = state.featured[state.current]?.title.trim();
+  const title = state.featured[state.current]?.title;
   if (!title) {
     $("#intro-title").textContent = "곧 새로운 게임으로 만나요.";
     return;
   }
-  const parts = title.match(/^(.+?)\s*[:：]\s*(.+)$/s);
-  $("#intro-title").innerHTML = parts
-    ? `${escapeHTML(parts[1].trim())}<small class="intro-subtitle">: ${escapeHTML(parts[2].trim())}</small>`
-    : escapeHTML(title);
+  $("#intro-title").innerHTML = gameTitleHTML(title, "intro-subtitle");
 }
 
 function primeSlide(index) {

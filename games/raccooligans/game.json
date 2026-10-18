@@ -8,8 +8,9 @@
   "status": "in-development",
   "featured": true,
   "demo": false,
-  "banner": "games/raccooligans/banner.webp",
-  "bannerAlt": "푸른 하늘 아래 고층 건물과 철교, 컨테이너 부두가 펼쳐진 너굴리건즈의 항만 도시",
+  "banner": "games/raccooligans/cover.webp",
+  "bannerFit": "contain",
+  "bannerAlt": "Raccooligans 로고와 함께 항만 도시를 배경으로 공구와 방패를 든 너구리 대장과 동료가 서 있는 대표 키 아트.",
   "cover": "games/raccooligans/cover.webp",
   "platforms": [
     {
