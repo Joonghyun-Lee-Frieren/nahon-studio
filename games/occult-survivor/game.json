@@ -24,9 +24,34 @@
       "caption": "개발 빌드 실제 화면 · 사냥의 시작"
     },
     {
-      "src": "games/occult-survivor/screenshot-02-preparation.webp",
-      "alt": "붉은 대성당 지역과 다음 스테이지의 보상, 전술 계열을 확인하는 출격 준비 화면",
-      "caption": "개발 빌드 실제 화면 · 지역과 전술 선택"
+      "src": "games/occult-survivor/screenshot-04-combat.webp",
+      "alt": "태양 없는 광장에서 사냥꾼과 설치형 서포터가 악령 무리에 맞서며 주변에 수집 자원이 빛나는 전투 화면",
+      "caption": "개발 빌드 실제 화면 · 총기와 마력, 서포터의 협공"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-06-magic.webp",
+      "alt": "폐허의 병원에서 사냥꾼 주변으로 적들이 몰려오고 푸른 낙뢰와 불꽃 마법이 동시에 발동하는 전투 화면",
+      "caption": "마법 전투 · 낙뢰와 메테오로 몰려오는 적 무리 돌파"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-07-boss.webp",
+      "alt": "격리 병원의 진홍자 보스 체력 표시와 사냥꾼의 총탄, 붉은 표식과 메테오가 보이는 지역 보스 전투 화면",
+      "caption": "지역 보스 · 위험 표식을 살피며 총기와 마법으로 대응"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-05-awakening.webp",
+      "alt": "무기 강화와 자동 공격, 능력치의 세 가지 카드 중 다음 성장을 선택하는 마력 각성 화면",
+      "caption": "개발 빌드 실제 화면 · 세 갈래 보상과 빌드 선택"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-08-supports.webp",
+      "alt": "수호 결계등과 야행 정찰기, 잿빛 사냥개가 편성된 세 칸과 방어막·비행체·생물·괴물형 서포터 목록, 훈련·승급 버튼 화면",
+      "caption": "서포터 편성 · 세 동료의 역할 조합과 훈련·승급"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-09-allies.webp",
+      "alt": "사냥꾼과 청록색 아군 표식이 붙은 결계등, 비행 정찰기, 늑대가 적들 사이에서 함께 싸우는 화면",
+      "caption": "아군 협공 · 방어막·비행체·늑대가 함께하는 전투"
     },
     {
       "src": "games/occult-survivor/screenshot-03-equipment.webp",
@@ -34,14 +59,39 @@
       "caption": "개발 빌드 실제 화면 · 무장 구성과 장비 성장"
     },
     {
-      "src": "games/occult-survivor/screenshot-04-combat.webp",
-      "alt": "태양 없는 광장에서 사냥꾼과 설치형 서포터가 악령 무리에 맞서며 주변에 수집 자원이 빛나는 전투 화면",
-      "caption": "개발 빌드 실제 화면 · 총기와 마력, 서포터의 협공"
+      "src": "games/occult-survivor/screenshot-10-growth.webp",
+      "alt": "사냥꾼의 공격력과 체력, 치명타·방어 능력 및 신체 단련·화약 연구·영혼 감응 등 여섯 능력치 투자 항목 화면",
+      "caption": "능력치 성장 · 체력·공격·방어·지원 위력에 재화 투자"
     },
     {
-      "src": "games/occult-survivor/screenshot-05-awakening.webp",
-      "alt": "무기 강화와 자동 공격, 능력치의 세 가지 카드 중 다음 성장을 선택하는 마력 각성 화면",
-      "caption": "개발 빌드 실제 화면 · 세 갈래 보상과 빌드 선택"
+      "src": "games/occult-survivor/screenshot-11-shelter.webp",
+      "alt": "쉘터 내부의 여섯 시설과 외곽 방벽 레벨, 시설 강화 재료, 휴식·정비와 쉘터 방어 버튼이 보이는 화면",
+      "caption": "쉘터 시설 · 방벽 강화와 휴식·정비로 다음 출격 준비"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-12-defense.webp",
+      "alt": "쉘터 중앙의 코어와 방어 시설, 북쪽에서 들어오는 적, 코어 체력과 남은 방어 시간이 표시된 전투 화면",
+      "caption": "쉘터 방어 · 진입 방향을 확인하고 코어와 방어 시설 수호"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-02-preparation.webp",
+      "alt": "붉은 대성당 지역과 다음 스테이지의 보상, 전술 계열을 확인하는 출격 준비 화면",
+      "caption": "개발 빌드 실제 화면 · 지역과 전술 선택"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-13-world.webp",
+      "alt": "도시 탐사 지도에서 붕괴 대성당부터 붉은 터널까지 여섯 지역의 진행도와 침수 항구의 작전 범위를 확인하는 화면",
+      "caption": "도시 탐사 · 지역별 진행도와 다음 활동 확인"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-14-memory.webp",
+      "alt": "잔향 복원실에서 유나의 기억 삽화와 동행 능력, 기억 조각을 사용하는 공명 성장·각인 강화 화면",
+      "caption": "기억 복원 · 기억 조각 수집과 동행 능력·각인 성장"
+    },
+    {
+      "src": "games/occult-survivor/screenshot-15-result.webp",
+      "alt": "진홍자 전투 정화 완료 후 획득 재화와 장비, 피해 기록, 장비 성장과 쉘터 복귀 버튼을 확인하는 화면",
+      "caption": "전투 결과 · 전리품 확인에서 장비 성장·쉘터 복귀까지"
     }
   ],
   "about": [
