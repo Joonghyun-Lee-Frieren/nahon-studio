@@ -29,6 +29,11 @@
       "caption": "수감생활 속 조사 · 주변 사물과 사람에게서 다음 단서를 찾으세요."
     },
     {
+      "src": "games/breakout-protocol/screenshot-07-dialogue.webp",
+      "alt": "레온의 초상화와 대화·사연 및 조력자·자료 제시 탭, 알고 있는 일과 다른 행동 버튼이 보이는 한국어 인물 대화 화면.",
+      "caption": "인물과 대화 · 사연을 듣고 자료를 제시하며 관계와 증언을 확인하세요."
+    },
+    {
       "src": "games/breakout-protocol/screenshot-02-inventory.webp",
       "alt": "장비·소모품·기록 분류 탭과 픽셀 아이템 슬롯, 정비 렌치의 설명과 사용 버튼이 보이는 한국어 소지품 화면.",
       "caption": "소지품과 도구 · 무엇을 어디에 사용할지 확인하고 탈출을 준비하세요."
@@ -39,9 +44,34 @@
       "caption": "기록 대조 · 두 자료와 가설을 연결하고 현장에서 확인하세요."
     },
     {
+      "src": "games/breakout-protocol/screenshot-12-visitation.webp",
+      "alt": "마라와 메이브가 유리 칸막이를 사이에 두고 마주한 픽셀 아트 면회 장면 아래 인물 초상화와 한국어 자막이 있는 연출 화면.",
+      "caption": "면회 이야기 · 기다리는 사람과의 연락도 수감생활의 일부가 됩니다."
+    },
+    {
+      "src": "games/breakout-protocol/screenshot-08-schedule.webp",
+      "alt": "하루 시간표에서 현재 오전 작업 시간이 강조되고, 현재 의무와 지정 장소, 다음 일정 및 이동 버튼이 보이는 한국어 일과표.",
+      "caption": "하루의 리듬 · 식사·작업·운동·면회·귀실 시간을 살피며 기회를 만드세요."
+    },
+    {
+      "src": "games/breakout-protocol/screenshot-09-map.webp",
+      "alt": "교도소 지도와 현재 위치, 인물·사물 범례, 구역 안내 및 시설 연결 버튼이 있는 한국어 지도 화면.",
+      "caption": "길 찾기 · 현재 위치와 시설 연결을 확인하고 다음 조사 장소를 정하세요."
+    },
+    {
+      "src": "games/breakout-protocol/screenshot-10-escape-plan.webp",
+      "alt": "경로별 탭과 하부 집수로의 준비 단계, 조사한 설비 기록 및 입구 이동 버튼이 보이는 한국어 탈출 계획 화면.",
+      "caption": "탈출 설계 · 조사한 기록과 준비 단계를 비교하고 다음 행동을 정하세요."
+    },
+    {
       "src": "games/breakout-protocol/screenshot-04-records.webp",
       "alt": "어두운 기록 시설에서 수감자가 반사 장치와 황금빛으로 이어진 광선 경로를 조사하는 실제 게임 화면.",
       "caption": "기록 시설의 장치 · 설비를 관찰하고 직접 작동시키는 환경 퍼즐."
+    },
+    {
+      "src": "games/breakout-protocol/screenshot-13-railway.webp",
+      "alt": "교정 이송역의 화차 표식과 편성 슬롯, 조력자의 역할 및 신호등, 점검 운행 버튼이 나뉘어 배치된 한국어 철도 퍼즐 화면.",
+      "caption": "이송역과 협력 · 화차 편성, 출발 신호, 동료의 역할을 준비하세요."
     },
     {
       "src": "games/breakout-protocol/screenshot-05-research.webp",
@@ -52,6 +82,16 @@
       "src": "games/breakout-protocol/screenshot-06-airport.webp",
       "alt": "외부 조력자 리나가 화물기와 활주로 설비가 있는 해안 공항을 조사하며 목표와 조사·소지품 버튼이 표시된 한국어 화면.",
       "caption": "담장 밖의 조력자 · 선착장과 공항을 거쳐 이송 기록을 추적하세요."
+    },
+    {
+      "src": "games/breakout-protocol/screenshot-14-submarine.webp",
+      "alt": "물 위의 잠수정과 나무 부두, 리나와 잠수 기사, 산소 점검 장비가 보이는 외부 이야기의 한국어 탐색 화면.",
+      "caption": "외해에서 해저까지 · 산소와 압력을 점검하며 잠수정 여정을 준비하세요."
+    },
+    {
+      "src": "games/breakout-protocol/screenshot-11-collection.webp",
+      "alt": "마라의 클리어 도장과 이보·님의 진행 기록, 미시작 인물 카드 및 사건·여정·탈출 경로 집계를 보여주는 한국어 시나리오 컬렉션.",
+      "caption": "여정을 모으는 컬렉션 · 인물별 진행과 클리어, 탈출 기록을 한눈에 확인하세요."
     }
   ],
   "about": [
