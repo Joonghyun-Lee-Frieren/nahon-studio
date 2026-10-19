@@ -23,9 +23,24 @@
   ],
   "screenshots": [
     {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-07-harbor.webp",
+      "alt": "랜턴을 든 여우 해적이 상점과 주민, 항해 탁자가 모인 잿물항을 둘러보는 한국어 게임 화면.",
+      "caption": "잿물항에서 시작하는 모험 · 주민을 만나고 보급과 다음 항해를 준비하세요."
+    },
+    {
       "src": "games/outlaw-isles-rogue-tides/screenshot-01-combat.webp",
       "alt": "어두운 수도원 던전에서 여우 주인공이 거대한 뿔 달린 보스와 싸우며 붉은 원으로 공격 범위가 표시되는 한국어 게임 화면.",
       "caption": "던전과 보스전 · 공격 전조를 읽고 베기·강공격·회피를 연결하세요."
+    },
+    {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-08-dialogue.webp",
+      "alt": "수달 주민 노트의 초상화와 대사, 주민의 부탁과 소문을 선택하는 한국어 대화 화면.",
+      "caption": "주민의 이야기 · 일상의 안부와 의뢰, 선원들의 증언을 따라가세요."
+    },
+    {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-10-chart.webp",
+      "alt": "여러 섬과 대륙의 목적지 카드, 출항 비용과 해금 조건, 배의 적재량을 보여 주는 세계 해도 화면.",
+      "caption": "세계 해도 · 목적지와 출항 비용을 살피고 다음 항로를 선택하세요."
     },
     {
       "src": "games/outlaw-isles-rogue-tides/screenshot-02-sailing.webp",
@@ -33,9 +48,9 @@
       "caption": "바다 위의 생존 · 풍랑과 위협에 대응하고 물자를 지켜 항구로 돌아오세요."
     },
     {
-      "src": "games/outlaw-isles-rogue-tides/screenshot-03-snow.webp",
-      "alt": "굵은 눈이 내리는 설원에서 여우 해적이 눈 덮인 식물과 건물 사이를 탐험하는 실제 게임 화면.",
-      "caption": "낯선 해안과 대륙 · 숲·설원·사막·유적의 주민과 흔적을 찾아가세요."
+      "src": "games/outlaw-isles-rogue-tides/screenshot-14-fishing.webp",
+      "alt": "수몰림 군도의 해안에서 여우 해적이 낚싯대를 들고 줄 장력과 끌어올리기 상태를 확인하는 낚시 화면.",
+      "caption": "해안의 낚시 · 줄의 장력을 조절하며 물고기를 끌어올리세요."
     },
     {
       "src": "games/outlaw-isles-rogue-tides/screenshot-04-farming.webp",
@@ -43,14 +58,49 @@
       "caption": "모험 사이의 생활 · 씨앗을 심고 수확해 다음 항해의 식량을 준비하세요."
     },
     {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-16-woodcutting.webp",
+      "alt": "주인공이 도끼로 나무를 베며 작업 진행 막대와 타격 효과가 나타나는 실제 게임 화면.",
+      "caption": "직접 모으는 자원 · 도끼로 목재를 마련해 제작과 보급에 활용하세요."
+    },
+    {
       "src": "games/outlaw-isles-rogue-tides/screenshot-05-inventory.webp",
       "alt": "음식·장비·재료·농장·도구 분류와 아이템 슬롯, 선택한 물품 설명을 나누어 보여 주는 한국어 가방 화면.",
       "caption": "선장의 소지품 · 장비와 도구, 음식과 제작 재료를 정리하세요."
     },
     {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-11-equipment.webp",
+      "alt": "무기·옷·신발·장신구의 네 장비 슬롯과 기본 작업 도구 안내를 보여 주는 한국어 장비 화면.",
+      "caption": "장비와 작업 도구 · 모험에 맞는 장비를 갖추고 생활 도구의 쓰임을 확인하세요."
+    },
+    {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-12-cooking.webp",
+      "alt": "모닥불의 요리·보급 메뉴에서 구운 생선, 물약, 붕대와 차의 재료와 제작 버튼을 보여 주는 한국어 화면.",
+      "caption": "불 곁에서의 준비 · 재료로 음식과 회복품을 만들고 휴식을 취하세요."
+    },
+    {
       "src": "games/outlaw-isles-rogue-tides/screenshot-06-shipyard.webp",
       "alt": "배의 개조 항목과 보유 재료, 필요한 비용을 확인하는 한국어 조선소 기능 화면.",
       "caption": "항해 준비와 배 개조 · 보급을 채우고 선박을 강화해 먼바다에 도전하세요."
+    },
+    {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-13-crew.webp",
+      "alt": "조타수 로안, 요리사 엘리아, 목수 브란의 초상화와 역할 지정 버튼을 보여 주는 선원 관리 화면.",
+      "caption": "함께 항해하는 선원 · 동료의 이야기를 듣고 원정에 필요한 주 역할을 맡기세요."
+    },
+    {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-15-desert.webp",
+      "alt": "유리비 지역의 황토색 해안에서 주인공과 주민, 선착장과 배를 함께 보여 주는 탐험 화면.",
+      "caption": "다른 대륙의 항구 · 유리비의 주민과 새로운 채집 자원을 만나세요."
+    },
+    {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-03-snow.webp",
+      "alt": "굵은 눈이 내리는 설원에서 여우 해적이 눈 덮인 식물과 건물 사이를 탐험하는 실제 게임 화면.",
+      "caption": "낯선 해안과 대륙 · 숲·설원·사막·유적의 주민과 흔적을 찾아가세요."
+    },
+    {
+      "src": "games/outlaw-isles-rogue-tides/screenshot-09-quest.webp",
+      "alt": "노트의 의뢰 아직 식지 않은 자리에서 필요한 생선과 장작, 보상과 수락 버튼을 확인하는 한국어 화면.",
+      "caption": "주민의 부탁 · 필요한 물품을 모으고 보상을 받으며 인연을 이어 가세요."
     }
   ],
   "about": [
