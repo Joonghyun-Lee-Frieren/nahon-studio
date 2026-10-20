@@ -6,6 +6,7 @@
   "genre": "ADVENTURE · PUZZLE",
   "status": "coming-soon",
   "featured": true,
+  "visible": true,
   "demo": false,
   "banner": "games/your-game/banner.webp",
   "bannerAlt": "배너 이미지에 보이는 장면을 설명해 주세요.",

@@ -17,7 +17,7 @@ async function loadDetail() {
     const manifest = await getJSON("content/games.json");
     if (!Array.isArray(manifest.games)) throw new Error("Invalid game manifest.");
     const results = await Promise.allSettled(manifest.games.map(async file => validateGame(await getJSON(file))));
-    detail.catalog = results.filter(result => result.status === "fulfilled").map(result => result.value);
+    detail.catalog = results.filter(result => result.status === "fulfilled").map(result => result.value).filter(isGameVisible);
     detail.game = detail.catalog.find(game => game.id === id);
     if (!detail.game) {
       const failed = results.some(result => result.status === "rejected");

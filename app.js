@@ -22,11 +22,11 @@ async function loadGames() {
       } else console.warn("Game content skipped:", result.status === "rejected" ? result.reason : "Duplicate id");
     }
     if (manifest.games.length && !games.length) throw new Error("No valid games found.");
-    state.games = games;
-    // Every registered game joins the carousel. Featured games appear first.
-    state.featured = [...games.filter(game => game.featured), ...games.filter(game => !game.featured)];
-    $("#demo-note").hidden = !games.some(game => game.demo);
-    $("#game-count").textContent = games.length;
+    state.games = games.filter(isGameVisible);
+    // Every visible game joins the carousel. Featured games appear first.
+    state.featured = [...state.games.filter(game => game.featured), ...state.games.filter(game => !game.featured)];
+    $("#demo-note").hidden = !state.games.some(game => game.demo);
+    $("#game-count").textContent = state.games.length;
     renderSlides();
     renderGames();
     if (games.length < manifest.games.length) {

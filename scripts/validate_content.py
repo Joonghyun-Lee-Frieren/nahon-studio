@@ -89,6 +89,8 @@ def validate_game(file):
     for field in ["demo", "featured"]:
         if not isinstance(game.get(field), bool):
             fail(file, f"{field}는 true 또는 false여야 합니다.")
+    if "visible" in game and not isinstance(game["visible"], bool):
+        fail(file, "visible은 true 또는 false여야 합니다.")
     local_file(game.get("banner"), file)
     if game.get("cover"):
         local_file(game["cover"], file)

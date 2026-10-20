@@ -56,6 +56,10 @@ function platformName(platform) {
   return `<span class="platform-name">${icon(platform)}<span>${PLATFORM[platform].name}</span></span>`;
 }
 
+function isGameVisible(game) {
+  return game.visible !== false;
+}
+
 function validateGame(game) {
   if (!game || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(game.id)) throw new Error("Invalid game id.");
   for (const key of ["title", "tagline", "description", "genre", "banner", "bannerAlt"]) {
@@ -63,6 +67,7 @@ function validateGame(game) {
   }
   if (!["released", "coming-soon", "in-development"].includes(game.status)) throw new Error("Invalid game status.");
   if (typeof game.demo !== "boolean" || typeof game.featured !== "boolean") throw new Error("demo and featured must be booleans.");
+  if (game.visible !== undefined && typeof game.visible !== "boolean") throw new Error("visible must be a boolean.");
   if (game.heroTitle !== undefined && typeof game.heroTitle !== "string") throw new Error("heroTitle must be text.");
   if (game.bannerFit !== undefined && !["cover", "contain"].includes(game.bannerFit)) throw new Error("bannerFit must be cover or contain.");
   if (!Array.isArray(game.platforms) || !game.platforms.length || game.platforms.some(p => !p || !Object.hasOwn(PLATFORM, p.type) || (p.url && !storeURL(p.url)))) throw new Error("Invalid game platforms.");
