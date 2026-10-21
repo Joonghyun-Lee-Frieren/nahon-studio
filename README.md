@@ -77,7 +77,7 @@ python3 scripts/validate_content.py
 
 - `index.html`: 브랜드·상단 소개·Studio 영역·검색 결과 제목 및 설명
 - `styles.css` 상단 `:root`: 포인트 컬러와 배경색
-- `assets/nahon-a1-light-loop.gif` / `nahon-a1-dark-loop.gif`: 8초마다 반복되는 A1 해달 로고 원본. 메인·게임 상세 페이지의 밝은 상단에는 light, 어두운 하단 로고 영역에는 dark를 사용합니다. 로고 영역의 배경을 바꾸면 HTML의 GIF와 PNG 경로도 함께 맞춰 주세요.
+- `assets/nahon-a1-light-loop.gif` / `nahon-a1-dark-loop.gif`: 8초마다 반복되는 A1 해달 로고 원본. 메인·게임 상세 페이지의 상단과 하단은 모두 밝은 페이지 배경에 맞춰 light를 사용합니다. dark는 어두운 배경에 사용할 수 있도록 보관합니다. 로고 영역의 배경을 바꾸면 HTML의 GIF와 PNG 경로도 함께 맞춰 주세요.
 - `assets/nahon-a1-light-still.png` / `nahon-a1-dark-still.png`: 기기의 ‘동작 줄이기’ 설정이 켜져 있을 때 표시하는 정지 버전. `picture`의 `source`에서 선택합니다.
 - `assets/favicon-32.png` / `favicon.ico`: 같은 해달 캐릭터의 브라우저 탭 아이콘
 - `assets/apple-touch-icon.png`: 홈 화면에 추가할 때 사용하는 아이콘

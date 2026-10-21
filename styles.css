@@ -118,12 +118,9 @@ button:disabled {
   overflow:hidden;
 }
 
-.brand .brand-logo {
+.brand .brand-logo,
+.footer-brand .brand-logo {
   mix-blend-mode:multiply;
-}
-
-.footer-brand {
-  background:#11171c;
 }
 
 .brand-logo {
@@ -1110,10 +1107,6 @@ button:disabled {
 }
 
 @media(max-width:800px) {
-  /* The image contains a title and gameplay; the bottom buttons and swipe remain available. */
-  .showcase:has(#slide-magical-toy-match.active) .carousel-arrow {
-    display:none;
-  }
   .site-header {
     height:86px;
   }
@@ -1127,16 +1120,24 @@ button:disabled {
     display:none;
   }
   .showcase {
-    margin-top:24px;
+    margin-top:16px;
+    background:#081922;
     --banner-image-height:calc((100vw - 64px) * .5625);
   }
   .slides {
+    display:grid;
     min-height:0;
-    height:calc(var(--banner-image-height) + 400px);
+    height:auto;
+  }
+  .slide {
+    position:relative;
+    inset:auto;
+    grid-area:1 / 1;
   }
   .slide-art,
   .slide--contain .slide-art {
-    left:0;
+    position:relative;
+    inset:auto;
     width:100%;
     height:var(--banner-image-height);
     object-fit:contain;
@@ -1144,48 +1145,74 @@ button:disabled {
   }
   .slide-copy,
   .slide--contain .slide-copy {
-    position:absolute;
-    left:0;
-    right:0;
-    top:calc(var(--banner-image-height) + 20px);
+    position:relative;
+    inset:auto;
     width:auto;
     max-width:none;
-    padding:0 28px;
+    padding:14px 18px 16px;
   }
   .slide-title {
     font-size:clamp(22px,4vw,30px);
   }
   .slide:after,
   .slide--contain:after {
-    background:linear-gradient(0deg,#081922 400px,transparent calc(400px + 40px));
+    display:none;
   }
   .carousel-arrow {
     top:calc(var(--banner-image-height) / 2 - 24px);
   }
   .hero-controls {
+    position:relative;
+    inset:auto;
     gap:10px;
-    flex-direction:column;
-    align-items:stretch;
-    left:28px;
-    right:28px;
-    bottom:18px;
+    flex-direction:row;
+    align-items:center;
+    padding:0 18px 12px;
   }
   .slide-tabs {
-    order:2;
-    flex:none;
+    flex:1;
+    gap:6px;
+    padding:3px 2px;
   }
   .slide-actions {
-    align-self:flex-end;
+    gap:8px;
+  }
+  .slide-actions [data-slide-step] {
+    display:none;
   }
   .slide-tab {
-    padding:5px;
+    position:relative;
+    flex:0 0 76px;
+    height:46px;
+    padding:2px;
+    gap:0;
+    background:#0a1821;
+  }
+  .slide-tab-preview {
+    width:100%;
+    height:100%;
+  }
+  .slide-tab-copy {
+    position:absolute;
+    bottom:4px;
+    left:4px;
+    background:#061116cc;
+    padding:2px 5px;
+    border-radius:2px;
   }
   .slide-tab-title {
+    display:none;
+  }
+  .slide-tab-number {
+    font-size:9px;
+    opacity:1;
+  }
+  .slide-count {
     font-size:9px;
   }
   .slide-tagline {
     font-size:13px;
-    margin:12px 0 16px;
+    margin:8px 0 12px;
   }
   .hero-demo {
     display:inline-block;
@@ -1277,17 +1304,16 @@ button:disabled {
     letter-spacing:1.4px;
   }
   .showcase {
-    margin-top:22px;
+    margin-top:12px;
     border-radius:8px;
     --banner-image-height:calc((100vw - 40px) * .5625);
   }
   .slide-copy,
   .slide--contain .slide-copy {
-    padding:0 26px;
+    padding:12px 16px 14px;
   }
   .slide-tagline {
     font-size:12px;
-    margin:14px 0 17px;
     word-break:keep-all;
     overflow-wrap:anywhere;
   }
@@ -1313,48 +1339,7 @@ button:disabled {
   .carousel-arrow-prev { left:12px; }
   .carousel-arrow-next { right:12px; }
   .hero-controls {
-    left:20px;
-    right:20px;
-    bottom:14px;
-    gap:10px;
-  }
-  .slide-tabs {
-    gap:8px;
-    padding:3px 2px 7px;
-  }
-  .slide-tab {
-    position:relative;
-    flex:0 0 96px;
-    height:58px;
-    padding:2px;
-    gap:0;
-    background:#0a1821;
-  }
-  .slide-tab-preview {
-    width:100%;
-    height:100%;
-  }
-  .slide-tab-copy {
-    position:absolute;
-    bottom:4px;
-    left:4px;
-    background:#061116cc;
-    padding:2px 5px;
-    border-radius:2px;
-  }
-  .slide-tab-title {
-    display:none;
-  }
-  .slide-tab-number {
-    font-size:9px;
-    opacity:1;
-  }
-  .slide-actions .round-button {
-    width:44px;
-    height:44px;
-  }
-  .slide-count {
-    font-size:9px;
+    padding-inline:16px;
   }
   .platform-strip {
     padding:19px 0;
