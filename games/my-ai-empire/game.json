@@ -8,6 +8,11 @@
   "status": "in-development",
   "featured": true,
   "demo": false,
+  "ageRating": {
+    "system": "KR",
+    "rating": "all",
+    "method": "self"
+  },
   "banner": "games/my-ai-empire/banner.webp",
   "bannerAlt": "남색 도시 야경과 지구본 아래, 따뜻한 사무실의 직원들과 서버실이 보이는 My AI Empire 공식 픽셀 아트",
   "platforms": [

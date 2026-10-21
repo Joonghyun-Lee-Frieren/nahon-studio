@@ -11,6 +11,8 @@ errors = []
 seen_ids = set()
 PLATFORMS = {"steam", "app-store", "google-play", "roblox", "stove"}
 STATUSES = {"released", "coming-soon", "in-development"}
+KR_AGE_RATINGS = {"all", "12", "15"}
+KR_CONTENT_DESCRIPTORS = {"선정성", "폭력성", "공포", "언어의 부적절성", "약물", "범죄", "사행성"}
 
 
 def fail(source, message):
@@ -63,6 +65,26 @@ def youtube_video_id(value):
         return None
 
 
+def validate_age_rating(rating, source):
+    if not isinstance(rating, dict):
+        fail(source, "ageRating은 객체여야 합니다.")
+        return
+    category = rating.get("rating")
+    if rating.get("system") != "KR" or not isinstance(category, str) or category not in KR_AGE_RATINGS:
+        fail(source, 'ageRating: system은 KR, rating은 문자열 all / 12 / 15 중 하나입니다.')
+    else:
+        local_file(f"assets/ratings/kr-{category}.gif", source)
+    if rating.get("method") not in ["self", "committee"]:
+        fail(source, "ageRating.method는 self 또는 committee여야 합니다.")
+    for field in ["authority", "classificationNumber", "classifiedAt"]:
+        if field in rating and (not isinstance(rating[field], str) or not rating[field].strip()):
+            fail(source, f"ageRating.{field}는 비어 있지 않은 문자열이어야 합니다.")
+    if "contentDescriptors" in rating:
+        descriptors = rating["contentDescriptors"]
+        if not isinstance(descriptors, list) or any(not isinstance(value, str) or value not in KR_CONTENT_DESCRIPTORS for value in descriptors) or len(set(descriptors)) != len(descriptors):
+            fail(source, "ageRating.contentDescriptors에는 통지서의 내용정보 항목을 중복 없이 입력하세요.")
+
+
 def validate_game(file):
     game = read_json(file)
     if game is None:
@@ -91,6 +113,8 @@ def validate_game(file):
             fail(file, f"{field}는 true 또는 false여야 합니다.")
     if "visible" in game and not isinstance(game["visible"], bool):
         fail(file, "visible은 true 또는 false여야 합니다.")
+    if "ageRating" in game:
+        validate_age_rating(game["ageRating"], file)
     local_file(game.get("banner"), file)
     if game.get("cover"):
         local_file(game["cover"], file)
@@ -162,4 +186,4 @@ else:
 if errors:
     print("콘텐츠 검사 실패:\n- " + "\n- ".join(errors))
     sys.exit(1)
-print(f"콘텐츠 검사 통과: 게임 {len(seen_ids)}개, JSON·이미지·플랫폼 링크·YouTube 링크·상세 소개 정상.")
+print(f"콘텐츠 검사 통과: 게임 {len(seen_ids)}개, JSON·이미지·플랫폼 링크·YouTube 링크·상세 소개·이용등급 정상.")

@@ -272,6 +272,13 @@ button:disabled {
   pointer-events:none;
 }
 
+.age-rating-logo { display: block; width: 56px; height: auto; flex: none; }
+.slide-rating { position: absolute; top: 20px; right: 20px; z-index: 3; pointer-events: none; }
+@media (max-width: 800px) {
+  .slide-rating { top: 12px; right: 12px; }
+  .slide-rating .age-rating-logo { width: 44px; }
+}
+
 .slide-copy {
   position:relative;
   z-index:1;

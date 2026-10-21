@@ -9,6 +9,11 @@
   "featured": false,
   "visible": true,
   "demo": false,
+  "ageRating": {
+    "system": "KR",
+    "rating": "12",
+    "method": "self"
+  },
   "banner": "games/apricot-and-acorn/banner.webp",
   "bannerAlt": "농사와 가축 돌보기, 낚시와 장터 교류, 동굴 탐험을 즐기는 픽셀 캐릭터들이 밝은 농장과 강변 마을에 모인 게임 타이틀 배경 일러스트.",
   "platforms": [

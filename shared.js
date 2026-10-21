@@ -13,6 +13,29 @@ const $$ = (selector) => [...document.querySelectorAll(selector)];
 const escapeHTML = (value) => String(value ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const pad = (value) => String(value).padStart(2, "0");
 
+// Official Korean rating artwork. The classification result belongs to each game.
+const KR_AGE_RATINGS = {
+  all: { label: "전체이용가", description: "모든 연령의 이용자가 이용할 수 있습니다.", image: "assets/ratings/kr-all.gif" },
+  "12": { label: "12세 이용가", description: "12세 미만은 이용할 수 없습니다.", image: "assets/ratings/kr-12.gif" },
+  "15": { label: "15세 이용가", description: "15세 미만은 이용할 수 없습니다.", image: "assets/ratings/kr-15.gif" }
+};
+const KR_CONTENT_DESCRIPTORS = ["선정성", "폭력성", "공포", "언어의 부적절성", "약물", "범죄", "사행성"];
+
+function validateAgeRating(rating) {
+  if (!rating || typeof rating !== "object" || Array.isArray(rating) || rating.system !== "KR" || typeof rating.rating !== "string" || !Object.hasOwn(KR_AGE_RATINGS, rating.rating)) throw new Error("Use a supported Korean age rating: all / 12 / 15.");
+  if (!["self", "committee"].includes(rating.method)) throw new Error("Rating method must be self or committee.");
+  for (const field of ["authority", "classificationNumber", "classifiedAt"]) {
+    if (rating[field] !== undefined && (typeof rating[field] !== "string" || !rating[field].trim())) throw new Error(`Age rating ${field} must be non-empty text.`);
+  }
+  if (rating.contentDescriptors !== undefined && (!Array.isArray(rating.contentDescriptors) || rating.contentDescriptors.some(value => !KR_CONTENT_DESCRIPTORS.includes(value)) || new Set(rating.contentDescriptors).size !== rating.contentDescriptors.length)) throw new Error("Use the content descriptors on the classification notice.");
+}
+
+function ageRatingImage(game) {
+  if (!game.ageRating) return "";
+  const rating = KR_AGE_RATINGS[game.ageRating.rating];
+  return `<img class="age-rating-logo" src="${escapeHTML(localURL(rating.image))}" alt="대한민국 게임 이용등급: ${rating.label}" width="56" height="66">`;
+}
+
 function localURL(path) {
   if (typeof path !== "string" || !path || path.startsWith("/") || path.includes("\\") || path.split("/").includes("..")) throw new Error("Use a project-relative file path.");
   const root = new URL("./", document.baseURI);
@@ -68,6 +91,7 @@ function validateGame(game) {
   if (!["released", "coming-soon", "in-development"].includes(game.status)) throw new Error("Invalid game status.");
   if (typeof game.demo !== "boolean" || typeof game.featured !== "boolean") throw new Error("demo and featured must be booleans.");
   if (game.visible !== undefined && typeof game.visible !== "boolean") throw new Error("visible must be a boolean.");
+  if (game.ageRating !== undefined) validateAgeRating(game.ageRating);
   if (game.heroTitle !== undefined && typeof game.heroTitle !== "string") throw new Error("heroTitle must be text.");
   if (game.bannerFit !== undefined && !["cover", "contain"].includes(game.bannerFit)) throw new Error("bannerFit must be cover or contain.");
   if (!Array.isArray(game.platforms) || !game.platforms.length || game.platforms.some(p => !p || !Object.hasOwn(PLATFORM, p.type) || (p.url && !storeURL(p.url)))) throw new Error("Invalid game platforms.");

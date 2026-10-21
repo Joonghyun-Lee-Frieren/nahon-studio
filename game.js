@@ -49,6 +49,25 @@ function renderError(title, message, retry = false) {
   $("#game-content").innerHTML = `<div class="wrap detail-error" role="alert"><div class="eyebrow">NAHON STUDIO</div><h1>${escapeHTML(title)}</h1><p>${escapeHTML(message)}</p><a class="hero-link" href="./index.html#games">게임 목록으로 <span aria-hidden="true">↗</span></a>${retry ? ' <button class="hero-link" id="detail-retry" type="button">다시 불러오기 ↻</button>' : ""}</div>`;
 }
 
+function renderAgeRating(game) {
+  if (!game.ageRating) return "";
+  const classification = game.ageRating;
+  const rating = KR_AGE_RATINGS[classification.rating];
+  const rows = [
+    ["적용 지역", "대한민국"],
+    ["분류 방식", classification.method === "self" ? "자체등급분류" : "등급분류기관 심의"],
+    ...(classification.authority ? [["분류 기관·사업자", classification.authority]] : []),
+    ...(classification.classificationNumber ? [["등급분류번호", classification.classificationNumber]] : []),
+    ...(classification.classifiedAt ? [["등급분류일", classification.classifiedAt]] : []),
+    ...(classification.contentDescriptors !== undefined ? [["내용정보", classification.contentDescriptors.length ? classification.contentDescriptors.join(" · ") : "해당 없음"]] : [])
+  ];
+  return `<section class="game-rating" aria-labelledby="age-rating-title">
+    <h2 id="age-rating-title">등급분류 정보</h2>
+    <div class="rating-summary">${ageRatingImage(game)}<div><strong>${rating.label}</strong><p>${rating.description}</p></div></div>
+    <table class="rating-table"><caption class="sr-only">${escapeHTML(game.title)} 등급분류 세부 정보</caption><tbody>${rows.map(([label, value]) => `<tr><th scope="row">${label}</th><td>${escapeHTML(value)}</td></tr>`).join("")}</tbody></table>
+  </section>`;
+}
+
 function renderDetail() {
   const game = detail.game;
   const tags = game.tags?.length ? game.tags : game.genre.split("·").map(tag => tag.trim()).filter(Boolean);
@@ -80,6 +99,7 @@ function renderDetail() {
           <p class="summary-tagline">${escapeHTML(game.tagline)}</p><p class="summary-description">${escapeHTML(game.description)}</p>
           <dl class="game-facts">${facts.map(([label, value]) => `<dt>${label}</dt><dd>${escapeHTML(value)}</dd>`).join("")}</dl>
           <div class="detail-tags" aria-label="게임 태그">${tags.map(tag => `<span class="detail-tag">${escapeHTML(tag)}</span>`).join("")}</div>
+          ${renderAgeRating(game)}
           <div class="product-stores"><h2>플레이할 플랫폼을 선택하세요</h2><div class="detail-store-list">${game.platforms.map(renderStore).join("")}</div></div>
           ${game.demo ? '<p class="detail-demo-note">이 페이지의 게임과 이미지는 소개 페이지 구성을 보여주는 예시입니다. 실제 출시 게임 정보가 아닙니다.</p>' : ""}
         </aside>

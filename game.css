@@ -42,6 +42,16 @@
 .youtube-link:hover { color: #fff; }
 .media-help { font-size: 10px; color: #8ba0aa; margin: 10px 0 0; line-height: 1.7; }
 .product-summary { min-width: 0; }
+.game-rating { margin-top: 24px; padding: 18px; border: 1px solid #304751; border-radius: 12px; background: #142d37; }
+.game-rating h2 { margin: 0 0 16px; color: #cedce1; font-size: 12px; font-weight: 500; }
+.rating-summary { display: flex; align-items: center; gap: 14px; }
+.rating-summary strong { color: #fff; font-size: 17px; }
+.rating-summary p { margin: 6px 0 0; color: #bed0d7; font-size: 11px; line-height: 1.6; word-break: keep-all; overflow-wrap: anywhere; }
+.rating-table { width: 100%; margin-top: 16px; border-collapse: collapse; font-size: 11px; line-height: 1.7; text-align: left; }
+.rating-table tr { border-top: 1px solid #304751; }
+.rating-table th, .rating-table td { padding: 8px 0; vertical-align: top; }
+.rating-table th { width: 92px; padding-right: 12px; color: #8ca6b2; font-weight: 400; }
+.rating-table td { color: #cedce1; overflow-wrap: anywhere; }
 .summary-cover { width: 100%; aspect-ratio: 2.14; object-fit: cover; border-radius: 4px; }
 .summary-tagline { font-size: 18px; font-weight: 600; line-height: 1.55; letter-spacing: -.6px; margin: 20px 0 10px; word-break: keep-all; overflow-wrap: anywhere; }
 .summary-description { font-size: 12px; line-height: 1.9; color: #abbec6; margin: 0 0 23px; }

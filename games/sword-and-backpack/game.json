@@ -8,6 +8,11 @@
   "status": "coming-soon",
   "featured": false,
   "demo": false,
+  "ageRating": {
+    "system": "KR",
+    "rating": "12",
+    "method": "self"
+  },
   "banner": "games/sword-and-backpack/banner.webp",
   "bannerAlt": "푸른 폭포와 거대한 천문 장치가 있는 밤의 수몰 유적. 네 명의 픽셀 모험가가 횃불이 켜진 돌계단을 오른다. 게임의 야간 타이틀 일러스트.",
   "cover": "games/sword-and-backpack/cover.webp",

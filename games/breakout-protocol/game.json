@@ -8,6 +8,11 @@
   "status": "in-development",
   "featured": false,
   "demo": false,
+  "ageRating": {
+    "system": "KR",
+    "rating": "15",
+    "method": "self"
+  },
   "banner": "games/breakout-protocol/cover.webp",
   "bannerFit": "contain",
   "bannerAlt": "Breakout Protocol 로고 아래, 달빛이 비치는 감옥 안뜰에 주황색 수감복을 입은 네 인물이 서 있는 대표 키 아트.",
