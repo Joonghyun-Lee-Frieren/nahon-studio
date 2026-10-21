@@ -1,6 +1,13 @@
-.detail-page { background: #f6f5f1; }
+.detail-page { background: #12232c; color: #eef2f1; color-scheme: dark; }
 .detail-main { background: #12232c; color: #eef2f1; min-height: 65vh; padding: 28px 0 72px; }
+.detail-page .site-header, .detail-page .site-footer { background: #12232c; }
 .detail-page .site-header { border-bottom: 0; }
+.detail-page .brand .brand-logo, .detail-page .footer-brand .brand-logo { mix-blend-mode: lighten; }
+.detail-page .nav-explore { border-color: #45606a; }
+.detail-page .nav-explore:hover { border-color: #bed0d7; background: #24414f; color: #fff; }
+.detail-page .site-footer p { color: #9bb0b9; }
+.detail-page .back-top { color: #cedce1; }
+.detail-page .back-top:hover { color: #fff; }
 .detail-loading, .detail-error { padding-block: 80px; min-height: 400px; }
 .detail-error h1 { font-size: 30px; letter-spacing: -1px; }
 .detail-error p { color: #adbbc2; line-height: 1.8; margin-bottom: 30px; }
