@@ -14,6 +14,8 @@
     "method": "self"
   },
   "banner": "games/unlisted-patient/banner.png",
+  "bannerTextPosition": "center-right",
+  "bannerFocus": { "x": 50, "y": 50 },
   "bannerAlt": "검은색과 흰색의 점묘로 표현된 병원 복도. 접수대와 문서, 벽시계 너머로 어두운 병실과 인물들이 보이는 실제 개발 빌드 화면.",
   "platforms": [
     {

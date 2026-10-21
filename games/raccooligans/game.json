@@ -9,7 +9,8 @@
   "featured": true,
   "demo": false,
   "banner": "games/raccooligans/cover.webp",
-  "bannerFit": "contain",
+  "bannerTextPosition": "bottom-left",
+  "bannerFocus": { "x": 68, "y": 50 },
   "bannerAlt": "Raccooligans 로고와 함께 항만 도시를 배경으로 공구와 방패를 든 너구리 대장과 동료가 서 있는 대표 키 아트.",
   "cover": "games/raccooligans/cover.webp",
   "platforms": [

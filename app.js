@@ -55,8 +55,8 @@ function renderSlides() {
   state.changing = false;
   state.current = 0;
   $("#slides").innerHTML = state.featured.map((game, index) => `
-    <article class="slide${game.bannerFit === "contain" ? " slide--contain" : ""}${index === 0 ? " active" : ""}" id="slide-${escapeHTML(game.id)}" role="group" aria-roledescription="슬라이드" aria-label="${index + 1} / ${state.featured.length}: ${escapeHTML(game.title)}" ${index ? 'aria-hidden="true" inert' : 'aria-hidden="false"'}>
-      <img class="slide-art" src="${escapeHTML(localURL(game.banner))}" alt="${escapeHTML(game.bannerAlt)}" ${index ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">
+    <article class="slide slide--${game.bannerTextPosition || "bottom-left"}${index === 0 ? " active" : ""}" id="slide-${escapeHTML(game.id)}" role="group" aria-roledescription="슬라이드" aria-label="${index + 1} / ${state.featured.length}: ${escapeHTML(game.title)}" ${index ? 'aria-hidden="true" inert' : 'aria-hidden="false"'}>
+      <img class="slide-art" src="${escapeHTML(localURL(game.banner))}" alt="${escapeHTML(game.bannerAlt)}" style="object-position:${game.bannerFocus?.x ?? 50}% ${game.bannerFocus?.y ?? 50}%" ${index ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">
       ${game.ageRating ? `<div class="slide-rating">${ageRatingImage(game)}</div>` : ""}
       <div class="slide-copy">
         <h2 class="slide-title">${gameTitleHTML(game.title, "slide-subtitle")}</h2>

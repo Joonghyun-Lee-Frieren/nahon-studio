@@ -9,9 +9,10 @@
   "featured": true,
   "demo": false,
   "banner": "games/the-family-beyond-the-wall/banner-v3.webp",
+  "bannerTextPosition": "bottom-left",
+  "bannerFocus": { "x": 65, "y": 50 },
   "bannerAlt": "매우 어두운 레트로 픽셀 아트 배너. 왼쪽의 The Family Beyond the Wall 타이틀과 헤드폰·진동선이 있는 SOUNDS & VIBES ONLY 로고는 선명하게 보인다. 오른쪽 현관과 서재는 짙은 그림자에 잠겨 있고, 축음기 옆에는 얼굴과 옷의 세부가 드러나지 않는 검은 사람 실루엣만 서 있다.",
   "cover": "games/the-family-beyond-the-wall/cover-v3.webp",
-  "bannerFit": "contain",
   "platforms": [
     {
       "type": "steam",

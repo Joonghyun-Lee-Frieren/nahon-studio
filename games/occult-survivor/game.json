@@ -9,6 +9,8 @@
   "featured": false,
   "demo": false,
   "banner": "games/occult-survivor/banner.webp",
+  "bannerTextPosition": "bottom-left",
+  "bannerFocus": { "x": 65, "y": 50 },
   "bannerAlt": "푸른 마력이 새겨진 권총을 든 사냥꾼과 황금빛 봉인 문양, 폐허의 도시를 배경으로 한 오컬트 서바이버 공식 키 아트",
   "cover": "games/occult-survivor/banner.webp",
   "platforms": [

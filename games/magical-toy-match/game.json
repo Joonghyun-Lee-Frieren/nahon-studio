@@ -9,6 +9,8 @@
   "featured": true,
   "demo": false,
   "banner": "games/magical-toy-match/banner-v2.webp",
+  "bannerTextPosition": "bottom-left",
+  "bannerFocus": { "x": 68, "y": 50 },
   "bannerAlt": "MAGICAL TOY MATCH 영문 플라스틱 블록 타이틀, 실제 퍼즐 화면을 바탕으로 한 세로형 모바일 패널과 랜턴·물병·톱니바퀴",
   "cover": "games/magical-toy-match/cover-v2.webp",
   "platforms": [
@@ -182,6 +184,5 @@
     "성장",
     "장난감"
   ],
-  "videos": [],
-  "bannerFit": "contain"
+  "videos": []
 }

@@ -9,6 +9,8 @@
   "featured": true,
   "demo": false,
   "banner": "games/yokai-town/banner-gameplay-v2.webp",
+  "bannerTextPosition": "top-right",
+  "bannerFocus": { "x": 50, "y": 50 },
   "bannerAlt": "Yokai Town 영문 로고와 도깨비·여우 캐릭터 옆에 자원 수량과 건설·수확 버튼이 보이는 마을 플레이 화면을 크게 배치한 홍보 배너",
   "platforms": [
     {
@@ -73,6 +75,5 @@
     "수집"
   ],
   "videos": [],
-  "cover": "games/yokai-town/cover-gameplay-v2.webp",
-  "bannerFit": "contain"
+  "cover": "games/yokai-town/cover-gameplay-v2.webp"
 }

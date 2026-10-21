@@ -9,6 +9,8 @@
   "featured": true,
   "demo": false,
   "banner": "games/route-zero/banner.webp",
+  "bannerTextPosition": "bottom-left",
+  "bannerFocus": { "x": 60, "y": 55 },
   "bannerAlt": "산악 철도의 역에서 보급 상자를 든 블록형 탐험가들이 터널로 향하는 열차에 올라타는 공식 키 아트",
   "cover": "games/route-zero/cover.webp",
   "platforms": [

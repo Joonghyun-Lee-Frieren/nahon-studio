@@ -14,6 +14,8 @@
     "method": "self"
   },
   "banner": "games/outlaw-isles-rogue-tides/banner.webp",
+  "bannerTextPosition": "center-left",
+  "bannerFocus": { "x": 70, "y": 50 },
   "bannerAlt": "붉은 달 아래, 랜턴과 곡도를 든 여우 해적이 박쥐·수달·상어 선원과 함께 파도를 가르는 셀화풍 범선 일러스트.",
   "cover": "games/outlaw-isles-rogue-tides/cover.webp",
   "platforms": [

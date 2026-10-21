@@ -6,3 +6,4 @@
 - `content/games.json`에 `games/<게임ID>/game.json`을 추가한 뒤 PR을 올려 `main`에 병합하면 게임 목록과 상단 배너에 자동 반영됩니다. 이후 수정은 해당 게임 폴더만 변경하면 됩니다.
 - 상세 주소: `https://joonghyun-lee-frieren.github.io/nahon-studio/game.html?id=<게임ID>` · [전체 작성 예시](ADDING_GAMES.md)
 - 이용등급이 확정되면 `ageRating`에 실제 결과를 추가하세요. [등급 입력 예시](AGE_RATINGS.md)
+- 배너 제목 위치는 `bannerTextPosition`(예: `bottom-right`), 이미지 중심은 `bannerFocus`(예: `{ "x": 65, "y": 50 }`)로 지정합니다.

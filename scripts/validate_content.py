@@ -3,6 +3,7 @@
 import json
 import re
 import sys
+import math
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 
@@ -13,6 +14,7 @@ PLATFORMS = {"steam", "app-store", "google-play", "roblox", "stove"}
 STATUSES = {"released", "coming-soon", "in-development"}
 KR_AGE_RATINGS = {"all", "12", "15"}
 KR_CONTENT_DESCRIPTORS = {"선정성", "폭력성", "공포", "언어의 부적절성", "약물", "범죄", "사행성"}
+BANNER_TEXT_POSITIONS = ["top-left", "center-left", "bottom-left", "top-right", "center-right", "bottom-right"]
 
 
 def fail(source, message):
@@ -106,6 +108,12 @@ def validate_game(file):
         fail(file, "heroTitle은 문자열이어야 합니다.")
     if "bannerFit" in game and game["bannerFit"] not in ["cover", "contain"]:
         fail(file, "bannerFit은 cover 또는 contain이어야 합니다.")
+    if "bannerTextPosition" in game and game["bannerTextPosition"] not in BANNER_TEXT_POSITIONS:
+        fail(file, "bannerTextPosition은 top/center/bottom과 left/right를 조합하세요. 예: bottom-right")
+    if "bannerFocus" in game:
+        focus = game["bannerFocus"]
+        if not isinstance(focus, dict) or any(type(focus.get(axis)) not in [int, float] or not math.isfinite(focus[axis]) or not 0 <= focus[axis] <= 100 for axis in ["x", "y"]):
+            fail(file, "bannerFocus의 x, y는 0~100 범위의 숫자여야 합니다.")
     if not isinstance(game.get("status"), str) or game["status"] not in STATUSES:
         fail(file, "status는 released / coming-soon / in-development 중 하나입니다.")
     for field in ["demo", "featured"]:

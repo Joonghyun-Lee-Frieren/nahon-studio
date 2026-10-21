@@ -9,6 +9,8 @@
   "featured": true,
   "demo": false,
   "banner": "games/beat-turret/promo-overview-v2.webp",
+  "bannerTextPosition": "bottom-left",
+  "bannerFocus": { "x": 65, "y": 50 },
   "bannerAlt": "BEAT TURRET 영문 로고와 실제 전투·선곡 화면을 배치한 소개 이미지. 박자 입력으로 포탑을 쏘는 리듬 디펜스이며 41곡, 장비 36모델, 세 난이도를 안내합니다.",
   "cover": "games/beat-turret/promo-overview-v2.webp",
   "platforms": [
@@ -201,6 +203,5 @@
     "힙합",
     "일렉트로니카"
   ],
-  "videos": [],
-  "bannerFit": "contain"
+  "videos": []
 }

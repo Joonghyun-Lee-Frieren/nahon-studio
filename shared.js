@@ -20,6 +20,7 @@ const KR_AGE_RATINGS = {
   "15": { label: "15세 이용가", description: "15세 미만은 이용할 수 없습니다.", image: "assets/ratings/kr-15.gif" }
 };
 const KR_CONTENT_DESCRIPTORS = ["선정성", "폭력성", "공포", "언어의 부적절성", "약물", "범죄", "사행성"];
+const BANNER_TEXT_POSITIONS = ["top-left", "center-left", "bottom-left", "top-right", "center-right", "bottom-right"];
 
 function validateAgeRating(rating) {
   if (!rating || typeof rating !== "object" || Array.isArray(rating) || rating.system !== "KR" || typeof rating.rating !== "string" || !Object.hasOwn(KR_AGE_RATINGS, rating.rating)) throw new Error("Use a supported Korean age rating: all / 12 / 15.");
@@ -94,6 +95,8 @@ function validateGame(game) {
   if (game.ageRating !== undefined) validateAgeRating(game.ageRating);
   if (game.heroTitle !== undefined && typeof game.heroTitle !== "string") throw new Error("heroTitle must be text.");
   if (game.bannerFit !== undefined && !["cover", "contain"].includes(game.bannerFit)) throw new Error("bannerFit must be cover or contain.");
+  if (game.bannerTextPosition !== undefined && !BANNER_TEXT_POSITIONS.includes(game.bannerTextPosition)) throw new Error("Invalid banner text position.");
+  if (game.bannerFocus !== undefined && (!game.bannerFocus || typeof game.bannerFocus !== "object" || Array.isArray(game.bannerFocus) || ["x", "y"].some(axis => !Number.isFinite(game.bannerFocus[axis]) || game.bannerFocus[axis] < 0 || game.bannerFocus[axis] > 100))) throw new Error("bannerFocus x and y must be numbers from 0 to 100.");
   if (!Array.isArray(game.platforms) || !game.platforms.length || game.platforms.some(p => !p || !Object.hasOwn(PLATFORM, p.type) || (p.url && !storeURL(p.url)))) throw new Error("Invalid game platforms.");
   localURL(game.banner);
   if (game.cover) localURL(game.cover);

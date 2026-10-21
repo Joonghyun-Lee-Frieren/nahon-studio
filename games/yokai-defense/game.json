@@ -9,6 +9,8 @@
   "featured": true,
   "demo": false,
   "banner": "games/yokai-defense/banner.webp",
+  "bannerTextPosition": "top-right",
+  "bannerFocus": { "x": 48, "y": 50 },
   "bannerAlt": "벚꽃과 성문이 있는 마을에서 고양이·여우·판다·토끼 영웅과 로봇이 요괴의 행렬에 맞서는 게임 타이틀 원화",
   "platforms": [
     {
